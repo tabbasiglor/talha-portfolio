@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/talha-portfolio/static/css/main.330ebbe5.css",
+    "main.js": "/talha-portfolio/static/js/main.3e91817b.js",
+    "static/js/453.d454450d.chunk.js": "/talha-portfolio/static/js/453.d454450d.chunk.js",
+    "static/media/figma-gradient-bg.png": "/talha-portfolio/static/media/figma-gradient-bg.833862aaf3a3e36f4298.png",
+    "index.html": "/talha-portfolio/index.html",
+    "main.330ebbe5.css.map": "/talha-portfolio/static/css/main.330ebbe5.css.map",
+    "main.3e91817b.js.map": "/talha-portfolio/static/js/main.3e91817b.js.map",
+    "453.d454450d.chunk.js.map": "/talha-portfolio/static/js/453.d454450d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.330ebbe5.css",
+    "static/js/main.3e91817b.js"
+  ]
+}
