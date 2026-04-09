@@ -1,6 +1,8 @@
 # Talha Faisal Portfolio
 
-React-based portfolio mapped from a portfolio template and customized for Talha Faisal's AI adoption implementation positioning.
+React + TypeScript portfolio for Talha Faisal's AI adoption implementation positioning.
+
+Live site: https://tabbasiglor.github.io/talha-portfolio
 
 ## Stack
 
@@ -13,37 +15,44 @@ React-based portfolio mapped from a portfolio template and customized for Talha 
 
 - Hero and positioning
 - Delivery method
-- Career thread timeline
-- Interactive implementation projects (narrative/technical modes)
-- Interactive capability modules (search, filters, detail panel)
+- Career timeline
+- Interactive implementation projects
+- Interactive capabilities (search, filters, detail panel)
 - Contact CTA
 
 ## Run locally
 
-1. Install dependencies:
-
 ```bash
 npm install
-```
-
-2. Start the dev server:
-
-```bash
 npm start
 ```
 
-3. Open `http://localhost:3000`
+Opens at `http://localhost:3000`.
 
-## Build
+## Deployment
+
+The repo has two branches:
+
+- `main` — source code
+- `gh-pages` — built site served by GitHub Pages (do not edit manually)
+
+After making changes, run both:
 
 ```bash
-npm run build
+git add .
+git commit -m "your message"
+git push           # backs up source code to main
+npm run deploy     # builds and pushes live site to gh-pages
 ```
 
-## Data sources in app
+`git push` and `npm run deploy` are separate steps. Both are needed. Skipping `npm run deploy` means the live site does not update.
 
-- `src/data/projects.json`
-- `src/data/capabilities.json`
-- `src/data/categoryLabels.json`
+## Content
 
-These are generated from the previous static portfolio data model so content stays consistent across versions.
+All site content lives in these files — no code changes needed for copy updates:
+
+- `src/data/projects.json` — work case studies
+- `src/data/capabilities.json` — capability cards
+- `src/data/categoryLabels.json` — capability category display names
+
+Component copy (hero, method, career, contact) lives directly in the relevant files under `src/components/`.
