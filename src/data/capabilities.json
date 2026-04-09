@@ -1,0 +1,497 @@
+[
+  {
+    "id": "copywriting-engine",
+    "name": "Copywriting Engine",
+    "category": "Content Creation",
+    "impact": 4,
+    "description": "Writing a social post from scratch takes longer than it should, and most drafts come out too stiff or too vague to actually perform. This automation takes a topic, angle, or rough brief and builds a complete post: a hook that earns the click, a body that delivers on it, and a CTA specific enough to work. It checks the output against quality criteria before handing it back, so what comes out is ready to review and post, not just a starting point to keep editing.",
+    "triggers": ["social post", "LinkedIn", "Twitter"],
+    "deliverables": ["Ready-to-publish draft", "Hook, body, and CTA structure", "Quality score"]
+  },
+  {
+    "id": "authority-voice-system",
+    "name": "Authority Voice System",
+    "category": "Content Creation",
+    "impact": 5,
+    "description": "When you write at volume, the voice drifts. Posts start sounding like everyone else's content, the phrasing gets generic, and the personality that made the content work gets diluted. This automation maintains a specific founder-style voice profile for AI and implementation content. Every draft gets checked against the voice constraints before output, so every post sounds like it came from the same person regardless of topic, format, or how fast it was produced.",
+    "triggers": ["personal brand content", "founder post", "AI consulting content"],
+    "deliverables": ["Voice-aligned draft", "Audience-tailored framing", "Cross-format output"]
+  },
+  {
+    "id": "human-voice-writer",
+    "name": "Human Voice Writer",
+    "category": "Content Creation",
+    "impact": 4,
+    "description": "AI-generated text has tells: phrasing that is slightly too formal, structure that is too clean, vocabulary that sounds processed rather than written. This automation rewrites any draft to remove those signals. Shorter sentences, natural rhythm, the kind of word choice a real person would actually reach for. Works across cold emails, follow-up messages, scripts, and long-form content where sounding like a human being is the whole point.",
+    "triggers": ["draft email", "rewrite this", "write message"],
+    "deliverables": ["Conversational rewrite", "Natural tone throughout", "No AI tells"]
+  },
+  {
+    "id": "hook-architect",
+    "name": "Hook Architect",
+    "category": "Content Creation",
+    "impact": 4,
+    "description": "The first sentence decides whether anyone reads the second. This automation generates opening lines for social posts, video scripts, and newsletters using proven hook frameworks: curiosity gaps, contrarian statements, specific numbers, and before-and-after framing. It produces several options per brief, explains why each one is likely to work, and scores them by retention potential. You pick the one that fits the content and audience.",
+    "triggers": ["opening line", "first sentence", "headline"],
+    "deliverables": ["Multiple hook options", "Framework rationale", "Retention-first picks"]
+  },
+  {
+    "id": "story-narrative-qa",
+    "name": "Story Narrative QA",
+    "category": "Content Creation",
+    "impact": 3,
+    "description": "Business writing often starts strong and then loses the plot somewhere in the middle. The point gets buried, the reader stops caring, or the ending lands with a thud because nothing was building toward it. This automation reads a draft and checks whether it has a real narrative arc: a setup that creates tension, a middle that builds toward something, and a payoff that earns the reader's time. It flags exactly where the structure collapses and suggests specific fixes, not generic notes.",
+    "triggers": ["narrative review", "story structure", "does this land"],
+    "deliverables": ["Narrative audit", "Arc recommendations", "Problem flags with rewrites"]
+  },
+  {
+    "id": "humor-layer-engine",
+    "name": "Humor Layer Engine",
+    "category": "Content Creation",
+    "impact": 3,
+    "description": "Adding humor to professional content is harder than it looks. Too much and it undercuts credibility. Too little and it just looks like you tried to be funny and missed. This automation reads the context, the audience, and the existing tone, then adds humor that fits the persona rather than disrupting it. It places jokes and asides at the right moments in a script or post, explains the timing logic, and adjusts based on whether the voice runs more dry or more absurdist.",
+    "triggers": ["make this funnier", "add a joke", "lighten the tone"],
+    "deliverables": ["Joke blocks for scripts", "Persona-aligned humor", "Timing notes"]
+  },
+  {
+    "id": "founder-linkedin-voicebook",
+    "name": "Founder LinkedIn Voicebook",
+    "category": "Content Creation",
+    "impact": 4,
+    "description": "LinkedIn founder content fails in two directions: too polished and corporate, or too raw and unfiltered. This automation is a reference system built around the style rules that make founder posts actually perform: specific formatting constraints, post opening patterns, prohibited phrases, and a pre-publish checklist. Run it before anything goes live on a founder account to check that the post passes the voice standard, not just the spell check.",
+    "triggers": ["LinkedIn post", "founder content", "social voice"],
+    "deliverables": ["Voice constraints", "Post templates", "Pre-publish checklist"]
+  },
+  {
+    "id": "content-orchestrator",
+    "name": "Content Orchestrator",
+    "category": "Strategy & Ideation",
+    "impact": 5,
+    "description": "Content strategy falls apart at the execution stage. The plan exists but the daily work of turning source material into posts, emails, and videos gets dropped when other things come up. This automation takes a content strategy or raw source material and produces a fully sequenced weekly production schedule: what gets written each day, what source material goes into what format, and what is already done versus what needs to happen next. Outputs a repurposing map and a daily checklist.",
+    "triggers": ["weekly content plan", "production schedule", "turn this into posts"],
+    "deliverables": ["Weekly content plan", "Repurposing map", "Daily checklist"]
+  },
+  {
+    "id": "idea-hub",
+    "name": "Idea Hub",
+    "category": "Strategy & Ideation",
+    "impact": 5,
+    "description": "Running out of content ideas is almost always a systems problem, not a creativity problem. The input pipeline is empty, the content calendar pressure kicks in, and anything gets published just to fill the slot. This automation generates a prioritized backlog of content topics by pulling from trend sources, competitive signals, and internal content goals. Every idea comes with a title option and a priority score so the backlog has direction rather than just volume.",
+    "triggers": ["content ideas", "fill the calendar", "brainstorm"],
+    "deliverables": ["Idea matrix", "Title options", "Priority backlog"]
+  },
+  {
+    "id": "creator-trend-tracker",
+    "name": "Creator Trend Tracker",
+    "category": "Strategy & Ideation",
+    "impact": 4,
+    "description": "Understanding what is actually working in a content space requires looking at creators who are winning, not just reading about what is supposed to work. This automation researches top-performing creators in a given niche, extracts the specific patterns behind their best content, and translates those patterns into formats that fit the existing voice and audience. The output is a set of creator profiles, a pattern extraction, and a gap analysis showing where the opportunity is.",
+    "triggers": ["competitive research", "what's working", "creator analysis"],
+    "deliverables": ["Creator profiles", "Pattern extraction", "Gap analysis"]
+  },
+  {
+    "id": "ai-weekly-briefing",
+    "name": "AI Weekly Briefing",
+    "category": "Strategy & Ideation",
+    "impact": 4,
+    "description": "Staying current on AI is a full-time job if done manually. This automation compiles the significant AI developments from the past week into a newsletter-ready digest with editorial framing already applied. It does not just summarize the news. It identifies which developments are worth an opinion and suggests angles for video content or social posts built around the week's material. Useful for founders and consultants who need to comment on AI publicly without spending hours tracking it.",
+    "triggers": ["weekly AI news", "newsletter digest", "what happened in AI"],
+    "deliverables": ["Weekly digest", "Newsletter draft", "Video angle options"]
+  },
+  {
+    "id": "long-form-publishing-qa",
+    "name": "Long-Form Publishing QA",
+    "category": "Blog & Long-Form",
+    "impact": 5,
+    "description": "Publishing a blog post without a proper review is how quality slips. Voice drift, structural problems, and clarity issues that are invisible when you are inside the draft become obvious after it is live. This automation runs a multi-stage review process before anything goes live: voice consistency check against a defined standard, structural audit for narrative integrity, and clarity flags with specific rewrite suggestions. The output is a reviewed draft plus a publishing checklist.",
+    "triggers": ["blog review", "pre-publish check", "QA this draft"],
+    "deliverables": ["Voice-checked draft", "Second-angle review", "Publishing checklist"]
+  },
+  {
+    "id": "newsletter-builder",
+    "name": "Newsletter Builder",
+    "category": "Blog & Long-Form",
+    "impact": 4,
+    "description": "Newsletters are slow to produce because starting from blank is uncomfortable and formatting is tedious. This automation builds newsletters from scratch given a topic and audience, or imports context from an existing source and restructures it into newsletter format. The output includes a scannable draft with a clear structure, multiple subject line options tested against open-rate principles, and section formatting that works across email clients.",
+    "triggers": ["write newsletter", "newsletter draft", "email content"],
+    "deliverables": ["Newsletter draft", "Subject line options", "Formatted sections"]
+  },
+  {
+    "id": "video-script-ops",
+    "name": "Video Script Ops",
+    "category": "Video & Script",
+    "impact": 5,
+    "description": "Writing video scripts manually is a bottleneck. The intake is vague, the structure wanders, and the final draft usually needs multiple passes before it is actually usable. This automation takes a video brief from intake to a production-ready script: it clarifies the topic framing, builds a segment structure with clear transitions, and produces a formatted final draft ready for a teleprompter or a producer to work from. Covers educational, promotional, and client-delivery video types.",
+    "triggers": ["write a script", "video script", "script for client"],
+    "deliverables": ["Structured script", "Segment breakdown", "Production-ready draft"]
+  },
+  {
+    "id": "broll-planner",
+    "name": "B-Roll Planner",
+    "category": "Video & Script",
+    "impact": 4,
+    "description": "Editing stalls when there is no clear plan for what footage goes where. This automation reads a finished script and produces a shot-by-shot b-roll plan: what footage to cut to, when to cut, what the visual should accomplish at each moment, and what to prompt an image or video tool to generate if live footage is not available. The output gives the editor a complete visual roadmap before the first cut is made.",
+    "triggers": ["b-roll suggestions", "visual direction", "footage plan"],
+    "deliverables": ["Shot suggestions", "Visual prompts", "Aesthetic consistency notes"]
+  },
+  {
+    "id": "shorts-loop-builder",
+    "name": "Shorts Loop Builder",
+    "category": "Video & Script",
+    "impact": 4,
+    "description": "Short-form video lives or dies on the loop. If a viewer watches to the end and the video does not pull them back to the beginning, the algorithm stops showing it. This automation writes opening hooks and closing structures specifically designed to create a loop: the end feels like the beginning, the question opened at the start gets resolved in a way that makes you want to rewatch. Outputs scored loop options with punch-out line variants for each.",
+    "triggers": ["short-form hook", "YouTube Shorts", "viral loop"],
+    "deliverables": ["Hook loop scripts", "Punch-out lines", "Loop potential scoring"]
+  },
+  {
+    "id": "motion-prompt-engineer",
+    "name": "Motion Prompt Engineer",
+    "category": "Video & Script",
+    "impact": 4,
+    "description": "Creating motion graphics from AI tools requires extremely specific prompting, and most first attempts produce the wrong result. This automation designs layered animation prompt packs for motion graphics, kinetic typography, and animated infographics. Each pack includes timestamp mappings that tell the tool what should happen when, animation intent specs that describe the movement precisely, and aesthetic constraints that keep multiple elements visually consistent across a piece.",
+    "triggers": ["motion graphic", "animated infographic", "kinetic text"],
+    "deliverables": ["Layered prompt packs", "Timestamp mappings", "Animation intent specs"]
+  },
+  {
+    "id": "podcast-insight-miner",
+    "name": "Podcast Insight Miner",
+    "category": "Clip Mining",
+    "impact": 4,
+    "description": "Long-form podcast content contains far more usable material than most people actually extract from it. This automation reads a full transcript and maps every repurposable moment: quotable passages for text posts, clip candidates for short-form video, and topic angles that can be developed into standalone content. The output is a structured content map showing what is inside the episode and what each piece can become, so nothing valuable gets left in the transcript.",
+    "triggers": ["podcast transcript", "repurpose episode", "mine this content"],
+    "deliverables": ["Content map", "Clip candidates", "Highlight passages"]
+  },
+  {
+    "id": "meeting-insight-miner",
+    "name": "Meeting Insight Miner",
+    "category": "Clip Mining",
+    "impact": 4,
+    "description": "Sales calls, client conversations, and team meetings produce insights that usually disappear when the call ends. This automation reads a meeting transcript and extracts the content assets inside it: observations worth sharing publicly, pattern-based insights that can become posts, and narrative moments with standalone value. All client or team details are anonymized before the output is produced, so the content is usable without exposing anyone in the source material.",
+    "triggers": ["meeting transcript", "turn call into content", "client insight mining"],
+    "deliverables": ["Insight extraction", "Content ideas", "Anonymized post drafts"]
+  },
+  {
+    "id": "clip-scoring-engine",
+    "name": "Clip Scoring Engine",
+    "category": "Clip Mining",
+    "impact": 5,
+    "description": "Finding the best clips in a long video is a judgment call that takes time and is easy to get wrong. This automation ranks short-form clip candidates by three criteria: hook strength, whether the clip makes sense on its own without the surrounding context, and whether the pacing and length match the target platform. Outputs a timestamped ranked list with hook rewrite options for any clip that almost qualifies so editing time goes to the right moments.",
+    "triggers": ["find the best clips", "score these moments", "clip extraction"],
+    "deliverables": ["Ranked clip list", "Timestamped moments", "Hook rewrites"]
+  },
+  {
+    "id": "transcript-router",
+    "name": "Transcript Router",
+    "category": "Clip Mining",
+    "impact": 4,
+    "description": "Working with video and podcast content requires the transcript first, and routing it to the right workflow adds friction before any actual work starts. This automation fetches YouTube or video transcripts and sends them to the appropriate downstream process: a quick summary if you need a fast read, content extraction if you want to repurpose the material, or a clip scoring run if you are looking for short-form candidates. One input, right destination, no manual routing.",
+    "triggers": ["get transcript", "YouTube summary", "fetch and summarize"],
+    "deliverables": ["Transcript fetch", "Summary output", "Workflow routing"]
+  },
+  {
+    "id": "social-visual-system",
+    "name": "Social Visual System",
+    "category": "Visuals & Thumbnails",
+    "impact": 4,
+    "description": "Social graphics fail when the visual direction is not specific enough to produce something consistent across multiple executions. This automation generates design prompts and format specs for the main social graphic types: quote cards, comparison graphics, carousel slides, and announcement visuals. Every output includes format variants for different aspect ratios, brand constraint notes, and a prompt that produces consistent results rather than a different look every time.",
+    "triggers": ["social graphic", "quote card", "carousel design"],
+    "deliverables": ["Image prompts", "Format variants", "Brand-consistent visual kit"]
+  },
+  {
+    "id": "thumbnail-research-engine",
+    "name": "Thumbnail Research Engine",
+    "category": "Visuals & Thumbnails",
+    "impact": 4,
+    "description": "Thumbnails are a research problem before they are a design problem. What makes a thumbnail work in a given content category is specific and learnable. This automation researches thumbnail performance patterns for a specific topic, identifies the visual and text elements that correlate with high click-through rates, and produces a conversion-focused concept for the video at hand. The output is a complete thumbnail brief with a hook visual direction and a prompt spec ready for execution.",
+    "triggers": ["thumbnail concept", "video thumbnail", "make a thumbnail"],
+    "deliverables": ["Thumbnail concept", "Hook visual direction", "Prompt spec"]
+  },
+  {
+    "id": "buffer-scheduler",
+    "name": "Buffer Scheduler",
+    "category": "Scheduling & Publishing",
+    "impact": 3,
+    "description": "Getting a post into the publishing queue should take ten seconds, not five minutes of platform navigation. This automation takes a ready draft and schedules it through Buffer with the right metadata: time slot selection based on audience activity, channel targeting, and account routing. No manual setup required. You hand it a post and it goes where it needs to go, at the right time, without touching the platform.",
+    "triggers": ["schedule this", "queue for LinkedIn", "add to Buffer"],
+    "deliverables": ["Scheduled post entries", "Account routing", "Time-slot setup"]
+  },
+  {
+    "id": "contentstudio-scheduler",
+    "name": "ContentStudio Scheduler",
+    "category": "Scheduling & Publishing",
+    "impact": 4,
+    "description": "Publishing across multiple platforms creates coordination problems: posts go out at the wrong time, drafts sit in the wrong state, and conflicts between scheduled content only become visible after someone notices the calendar is wrong. This automation manages the full ContentStudio publishing workflow: editing drafts, checking for scheduling conflicts, routing posts to the right platforms, and keeping the calendar clean. Flags anything that needs attention before it becomes a problem.",
+    "triggers": ["schedule post", "check drafts", "publishing queue"],
+    "deliverables": ["Posting calendar", "Conflict checks", "Cross-platform queue"]
+  },
+  {
+    "id": "influencer-monitor",
+    "name": "Influencer Monitor",
+    "category": "Engagement & Monitoring",
+    "impact": 4,
+    "description": "Engagement opportunities on social media are time-sensitive and easy to miss, and most monitoring tools surface too much activity without telling you which of it is actually worth acting on. This automation tracks what key accounts and influencers are posting, scores the opportunities by relevance and strategic value, and produces specific comment prompts for the highest-value engagements. The scoring layer is the difference between a useful monitoring system and just more noise.",
+    "triggers": ["social monitoring", "engagement opportunities", "what's trending"],
+    "deliverables": ["Scored opportunities", "Comment prompts", "Trend snapshots"]
+  },
+  {
+    "id": "linkedin-connection-qualifier",
+    "name": "LinkedIn Connection Qualifier",
+    "category": "Engagement & Monitoring",
+    "impact": 5,
+    "description": "Not every LinkedIn connection request or comment deserves the same response, and manually reviewing all of them wastes time on people who will never become clients. This automation reviews inbound connection requests and comment activity, scores each one for lead potential based on title, company, and engagement signal, and outputs an accept or pass recommendation with a tailored follow-up message draft for anyone worth pursuing. You review and approve, it handles the rest.",
+    "triggers": ["connection requests", "who's commenting", "lead from LinkedIn"],
+    "deliverables": ["Lead scoring", "Accept or pass recommendation", "Warm message drafts"]
+  },
+  {
+    "id": "sales-strategist",
+    "name": "High-Conviction Sales Strategist",
+    "category": "Sales & Outreach",
+    "impact": 5,
+    "description": "Generic sales messaging gets ignored because it reads like it was written for everyone. This automation builds outbound messages, objection responses, and offer framing for a specific prospect and deal situation: their industry, their stated problem, where they are in the conversation. It does not produce a template to fill in. It produces a message written for this person, this situation, and this moment in the relationship. The difference shows in reply rates.",
+    "triggers": ["sales pitch", "cold outreach", "handle this objection"],
+    "deliverables": ["Pitch drafts", "Follow-up sequence", "Offer framing"]
+  },
+  {
+    "id": "sales-call-analyzer",
+    "name": "Sales Call Analyzer",
+    "category": "Sales & Outreach",
+    "impact": 4,
+    "description": "Most sales calls have a few moments where the deal was won or lost, and most people cannot identify them in real time. This automation reviews a call transcript or script and finds exactly where the conversation lost momentum, where an objection was handled poorly, and where the offer framing was unclear. Outputs a scored review of the call, rewrites of the weak sections, and an objection response library built from what actually came up in the conversation.",
+    "triggers": ["analyze call", "sales coaching", "script review"],
+    "deliverables": ["Call scorecard", "Rewrite suggestions", "Objection response library"]
+  },
+  {
+    "id": "outreach-orchestrator",
+    "name": "Outreach Orchestrator",
+    "category": "Sales & Outreach",
+    "impact": 5,
+    "description": "Running outreach across podcast, speaking, B2B, and LinkedIn simultaneously means managing four pipelines with different cadences, different messages, and different follow-up logic. This automation unifies all of them into one system: it generates lead lists for each channel, writes message sequences appropriate for each context, and produces a channel plan that coordinates the outreach without letting any pipeline go cold. Everything runs from one place instead of four separate trackers.",
+    "triggers": ["find podcasts", "generate leads", "LinkedIn outreach"],
+    "deliverables": ["Lead lists", "Message sequences", "Channel plan"]
+  },
+  {
+    "id": "lead-qualifier",
+    "name": "Lead Qualifier",
+    "category": "Sales & Outreach",
+    "impact": 4,
+    "description": "Booking discovery calls with people who will never become clients wastes time on both sides. This automation reviews a potential client against fit, budget, and strategic priority criteria before anything is scheduled. It produces a qualification verdict with confidence level, risk notes for anything that might become a problem, and a research handoff with the context needed to run the call well if the lead does qualify.",
+    "triggers": ["qualify this lead", "is this a good fit", "discovery call prep"],
+    "deliverables": ["Qualification verdict", "Risk notes", "Research handoff"]
+  },
+  {
+    "id": "instantly-crm-orchestrator",
+    "name": "Instantly CRM Orchestrator",
+    "category": "CRM & Pipeline",
+    "impact": 5,
+    "description": "CRMs go stale because updating them manually is a tax on every interaction. This automation reconciles email activity, LinkedIn touchpoints, meeting notes, and calendar signals into a single updated stage view. It reads the signals across all those sources and produces next action recommendations for each active lead, so the CRM reflects reality rather than whatever someone last had time to update. Run it daily and the pipeline stays clean without manual data entry.",
+    "triggers": ["CRM review", "check leads", "update pipeline"],
+    "deliverables": ["Stage suggestions", "Engagement scoring", "Next-action queue"]
+  },
+  {
+    "id": "podcast-crm-orchestrator",
+    "name": "Podcast CRM Orchestrator",
+    "category": "CRM & Pipeline",
+    "impact": 4,
+    "description": "Podcast guest outreach requires a different cadence than B2B sales, and most people manage it in a spreadsheet that eventually gets abandoned. This automation tracks the full podcast outreach pipeline from first contact through booking confirmation. It surfaces which hosts are overdue for a follow-up, what the appropriate next message is given where the conversation left off, and which ones have gone cold and need a different approach.",
+    "triggers": ["podcast outreach pipeline", "host follow-up", "booking status"],
+    "deliverables": ["Host pipeline state", "Action queue", "Follow-up guidance"]
+  },
+  {
+    "id": "daily-crm-orchestrator",
+    "name": "Daily CRM Orchestrator",
+    "category": "CRM & Pipeline",
+    "impact": 4,
+    "description": "Reviewing two separate pipelines every morning from two separate tools makes the start of the day slow and easy to skip. This automation runs a combined morning review of the B2B lead pipeline and the podcast outreach pipeline in a single sequence. The output is a prioritized action list for the day: who needs a reply, who needs a follow-up, and what is at risk of falling through the cracks. Replaces the manual morning dashboard check with one clean output.",
+    "triggers": ["morning CRM check", "daily pipeline review", "start of day review"],
+    "deliverables": ["Dual action report", "Priority leads", "Touchpoint summaries"]
+  },
+  {
+    "id": "paid-ads-strategy",
+    "name": "Paid Ads Strategy",
+    "category": "Paid Advertising",
+    "impact": 4,
+    "description": "Starting a paid campaign without a clear structure leads to budget spread too thin across too many audiences, no clear winner to scale, and a report that is hard to interpret at the end of the month. This automation plans the campaign architecture before any spend is committed: channel selection based on audience behavior, budget allocation across channels and ad sets, and a targeting matrix with primary and secondary segments defined. The output makes the build faster and the results easier to read.",
+    "triggers": ["campaign planning", "budget allocation", "ad strategy"],
+    "deliverables": ["Channel plan", "Budget model", "Targeting matrix"]
+  },
+  {
+    "id": "paid-ads-copywriting",
+    "name": "Paid Ads Copywriting",
+    "category": "Paid Advertising",
+    "impact": 4,
+    "description": "Ad copy that does not have real variation gives the algorithm nothing to optimize. This automation produces multiple headline and body copy variants for the major ad platforms, with creative hooks that are actually different from each other rather than slight rewrites of the same angle. Each variant comes with a CTA option and a rationale for why the approach works for the target audience and platform. Testing has real variation to work with.",
+    "triggers": ["ad copy", "headline variants", "CTA options"],
+    "deliverables": ["Ad variants", "Creative hooks", "CTA tests"]
+  },
+  {
+    "id": "paid-ads-reporting",
+    "name": "Paid Ads Reporting",
+    "category": "Paid Advertising",
+    "impact": 4,
+    "description": "Pulling together a paid ads performance report manually from platform dashboards takes time and produces inconsistently formatted documents that are hard to compare month over month. This automation produces a clean performance summary from campaign data: what ran, what the numbers were, what they mean, and what should change next month. Outputs a formatted DOCX report and an optional XLSX table for anyone who needs to dig further into the data.",
+    "triggers": ["campaign report", "ad performance summary", "monthly PPC report"],
+    "deliverables": ["Performance summary", "DOCX report", "Optional XLSX table"]
+  },
+  {
+    "id": "daily-task-runner",
+    "name": "Daily Task Runner",
+    "category": "Task & Project Management",
+    "impact": 4,
+    "description": "A task list is only useful if the tasks actually get done. This automation takes a daily task queue and executes each item by routing it to the right downstream automation. It tracks what gets completed, flags anything that stalls or needs human review, and notes what changed during the run. The result is a task list that clears itself rather than accumulating items until someone clears it manually at the end of the week.",
+    "triggers": ["run my tasks", "start my day", "daily tasks"],
+    "deliverables": ["Task execution log", "Progress status", "Improvement notes"]
+  },
+  {
+    "id": "todoist-project-manager",
+    "name": "Todoist Project Manager",
+    "category": "Task & Project Management",
+    "impact": 5,
+    "description": "Projects fall behind quietly. Tasks go overdue, ownership becomes unclear, and the dependency chain breaks in ways that do not surface until a deadline is already missed. This automation audits the task structure across a Todoist project or team: it finds overdue items, surfaces tasks with no clear owner, maps dependencies that are missing or incorrectly set, and produces a delegation plan and a cleaned-up dependency map so the project does not quietly fall behind.",
+    "triggers": ["task audit", "project status", "overdue tasks"],
+    "deliverables": ["Task audit", "Delegation plan", "Dependency map"]
+  },
+  {
+    "id": "meeting-task-orchestrator",
+    "name": "Meeting Task Orchestrator",
+    "category": "Task & Project Management",
+    "impact": 4,
+    "description": "Every meeting produces action items. Most of them do not get captured properly, which means the work gets re-discussed in the next meeting instead of done. This automation processes a meeting recording or transcript and converts every action item into a properly structured task: clear owner, clear description, dependencies noted, and the task logged in the right place. By the time the call ends, the action items are already assigned.",
+    "triggers": ["process meeting", "tasks from call", "post-call actions"],
+    "deliverables": ["Action item extraction", "Task assignments", "Dependency handling"]
+  },
+  {
+    "id": "architecture-design",
+    "name": "Architecture Design",
+    "category": "Client Delivery",
+    "impact": 5,
+    "description": "Starting an implementation without a shared picture of what is being built and in what order leads to scope drift and missed dependencies. This automation produces a 90-day implementation blueprint: what the system architecture looks like, how each integration connects, what the component build sequence is, and what the timeline looks like week by week. The output gives everyone involved a single document to align on before the build starts, not after something goes wrong.",
+    "triggers": ["implementation blueprint", "design architecture", "phase plan"],
+    "deliverables": ["System blueprint", "Integration specs", "Sequenced timeline"]
+  },
+  {
+    "id": "integration-audit",
+    "name": "Integration Audit",
+    "category": "Client Delivery",
+    "impact": 5,
+    "description": "Integration problems found during a build are expensive. Integration problems found in an audit are not. This automation reviews the API structure, authentication requirements, rate limits, and data shape of every integration in scope before a line of build work begins. The output is a feasibility report with a risk matrix that identifies what will break, what needs a workaround, and what is genuinely blocked. Problems get found in the audit, not in production.",
+    "triggers": ["API audit", "integration feasibility", "pre-build risk check"],
+    "deliverables": ["Feasibility report", "Auth requirements", "Risk matrix"]
+  },
+  {
+    "id": "implementation-manager",
+    "name": "Implementation Manager",
+    "category": "Client Delivery",
+    "impact": 4,
+    "description": "Implementations go off track when nobody has a clear picture of what is done, what is in progress, and what is blocked. This automation tracks delivery progress, UAT execution logs, and client feedback loops in one place. It flags blockers early, maintains a live status report, and keeps the delivery timeline visible rather than requiring a status meeting to find out where things stand.",
+    "triggers": ["track implementation", "UAT status", "delivery progress"],
+    "deliverables": ["Progress tracking", "UAT logs", "Status reports"]
+  },
+  {
+    "id": "podcast-ops-playbook",
+    "name": "Podcast Ops Playbook",
+    "category": "Podcast & Sponsor Ops",
+    "impact": 3,
+    "description": "Managing podcast guest intake manually means responding to every inquiry individually, tracking qualification status in a spreadsheet, and chasing booking confirmations by hand. This automation handles the full guest workflow: triage inbound inquiries, run guests through a qualification checklist, send the right communication at each stage, and maintain the booking calendar. The host focuses on the conversation. The logistics run themselves.",
+    "triggers": ["podcast guests", "guest inquiry", "booking workflow"],
+    "deliverables": ["Inbox triage", "Guest qualification", "Booking confirmation"]
+  },
+  {
+    "id": "sponsor-management",
+    "name": "Sponsor Management",
+    "category": "Podcast & Sponsor Ops",
+    "impact": 4,
+    "description": "Podcast sponsor relationships go cold when billing and re-engagement cycles are not tracked. This automation manages the sponsor pipeline from initial vetting through active billing cycles and renewal timing. It tracks which sponsors are current, which ones have an upcoming billing action, and which ones have gone quiet long enough to need a re-engagement message. No sponsor relationship falls off the calendar because someone forgot to follow up.",
+    "triggers": ["sponsor pipeline", "sponsor billing", "re-engagement"],
+    "deliverables": ["Sponsor pipeline", "Billing actions", "Retention prompts"]
+  },
+  {
+    "id": "recursive-improvement",
+    "name": "Recursive Improvement Protocol",
+    "category": "System Management",
+    "impact": 5,
+    "description": "Automations degrade over time if nobody reviews them. Prompts drift, edge cases accumulate, and the gap between what the system does and what it should do quietly widens until something breaks. This automation runs a structured post-execution review in three modes depending on how much time is available: a quick maintenance pass for routine checks, a fast review for a specific process, or a full deep analysis across the whole system. Every run produces an improvement log and a set of specific optimization actions.",
+    "triggers": ["post-execution review", "improvement check", "Friday review"],
+    "deliverables": ["Execution review", "Improvement log", "Optimization actions"]
+  },
+  {
+    "id": "skill-creator",
+    "name": "Skill Creator",
+    "category": "System Management",
+    "impact": 4,
+    "description": "Building a new automation from scratch without a structured process produces something that triggers inconsistently, underperforms on edge cases, and is hard to iterate on. This automation guides the build process: writing a clean skill spec, setting up a benchmark evaluation suite, and running tests against real prompts to find where the skill underperforms. The output is a production-ready automation with performance data attached, not just a first draft that seems to work.",
+    "triggers": ["create automation", "build a skill", "benchmark this skill"],
+    "deliverables": ["Skill spec", "Eval setup", "Optimization recommendations"]
+  },
+  {
+    "id": "schedule-engine",
+    "name": "Schedule Engine",
+    "category": "System Management",
+    "impact": 3,
+    "description": "Recurring automations that depend on someone remembering to start them eventually stop running. This automation sets up the scheduling infrastructure: fixed-interval runs, on-demand triggers, and the configuration that keeps the automation firing on schedule without manual intervention. The task runs when it should. The only time anyone needs to touch it is when the schedule itself needs to change.",
+    "triggers": ["recurring automation", "schedule this task", "run on a timer"],
+    "deliverables": ["Schedule setup", "Run cadence config", "Automation trigger"]
+  },
+  {
+    "id": "zapier-mcp-ops",
+    "name": "Zapier MCP Operations",
+    "category": "Integration & Tools",
+    "impact": 4,
+    "description": "Zapier MCP integrations break in predictable ways: wrong parameter formats, unexpected authentication flows, and actions that work in testing but fail on the first real payload. This automation implements Zapier MCP workflows with parameter patterns that have been tested against the actual behavior of Google Drive, Google Ads, and other major integrations. The goal is an integration that works correctly the first time rather than one that requires three debugging sessions to stabilize.",
+    "triggers": ["Zapier integration", "Google Drive workflow", "MCP integration"],
+    "deliverables": ["MCP action patterns", "Parameter templates", "Cost-aware call design"]
+  },
+  {
+    "id": "docx-studio",
+    "name": "DOCX Studio",
+    "category": "Document Systems",
+    "impact": 3,
+    "description": "Word documents are slow to format and easy to break if the structure is not set up correctly from the start. This automation creates and edits Word documents with full formatting control: headings, table of contents, tables, tracked changes, and layout handled programmatically. The output is a clean, properly structured document that does not need reformatting before it goes out.",
+    "triggers": ["Word document", ".docx", "formatted report"],
+    "deliverables": ["DOCX creation", "Formatting updates", "Tracked change workflows"]
+  },
+  {
+    "id": "xlsx-studio",
+    "name": "XLSX Studio",
+    "category": "Document Systems",
+    "impact": 3,
+    "description": "Spreadsheets built manually accumulate inconsistencies: wrong formula references, data not structured for analysis, and formatting that makes the output hard to read or hand off. This automation builds spreadsheets with clean formula architecture, properly structured tabular data, and chart-ready formatting. The output works as a real tool, not just a formatted data dump that someone else has to clean before using.",
+    "triggers": ["spreadsheet", "Excel", "data table"],
+    "deliverables": ["Sheet generation", "Formula setup", "Chart-ready structure"]
+  },
+  {
+    "id": "pptx-studio",
+    "name": "PPTX Studio",
+    "category": "Document Systems",
+    "impact": 3,
+    "description": "Building a presentation deck from scratch takes longer than it should because layout, slide structure, and formatting all require manual setup before any content goes in. This automation handles the deck architecture: slide layout, speaker notes structure, template alignment, and the build of each slide in sequence. The output is a properly structured deck that a designer can refine or a presenter can use directly without fighting the formatting.",
+    "triggers": ["presentation", "slide deck", ".pptx"],
+    "deliverables": ["Deck build", "Slide edits", "Template alignment"]
+  },
+  {
+    "id": "pdf-toolkit",
+    "name": "PDF Toolkit",
+    "category": "Document Systems",
+    "impact": 3,
+    "description": "PDFs are designed not to be edited, which creates friction every time one needs to be processed. This automation handles the standard PDF operations that would otherwise require a separate tool: extracting text or tables from a document, merging multiple PDFs into one, splitting a document into parts, filling or extracting form fields, and generating new PDFs from other content. One automation handles every task that would otherwise mean switching tools.",
+    "triggers": ["PDF", "extract from PDF", "merge PDFs"],
+    "deliverables": ["Text extraction", "Merge or split", "Form workflows"]
+  },
+  {
+    "id": "plugin-customizer",
+    "name": "Cowork Plugin Customizer",
+    "category": "Plugin Management",
+    "impact": 4,
+    "description": "A plugin built for general use rarely fits a specific organization's tools and workflows without adjustment. This automation configures a Cowork plugin to match the actual setup: the specific connectors the organization uses, the skill behaviors that need to reflect internal processes, and the settings that need to match how the team actually works. The output is a plugin that works correctly in the real environment, not just in a default install.",
+    "triggers": ["customize plugin", "configure plugin", "plugin settings"],
+    "deliverables": ["Plugin config updates", "Workflow alignment", "Org-specific tuning"]
+  },
+  {
+    "id": "plugin-builder",
+    "name": "Cowork Plugin Builder",
+    "category": "Plugin Management",
+    "impact": 4,
+    "description": "Building a new plugin from scratch without a structured process produces something that installs but does not work cleanly. This automation guides the build from setup through scaffolding: defining the plugin structure, configuring the initial settings, wiring the connectors, and producing a working plugin file ready for installation. The build checklist keeps the process in order so nothing is skipped and the output is correct the first time.",
+    "triggers": ["create a plugin", "build a plugin", "new plugin"],
+    "deliverables": ["Plugin scaffold", "Initial config", "Build checklist"]
+  }
+]

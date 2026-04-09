@@ -1,0 +1,68 @@
+.skills-container {
+  width: min(1180px, 92vw);
+  margin: 2.2rem auto 0;
+  padding: 2rem 1.2rem;
+  border-radius: 22px;
+  border: 1px solid color-mix(in srgb, var(--line) 88%, transparent);
+  background:
+    linear-gradient(140deg, color-mix(in srgb, #8b5cf6 14%, transparent), color-mix(in srgb, #ec4899 9%, transparent)),
+    var(--surface);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+
+  h1 {
+    margin-top: 0.55rem;
+    font-size: clamp(1.3rem, 2.9vw, 2rem);
+  }
+}
+
+.skills-grid.method-grid {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.skills-grid .method-card {
+  border: 1px solid color-mix(in srgb, var(--line) 92%, transparent);
+  background: color-mix(in srgb, var(--surface-soft) 90%, transparent);
+  border-radius: 16px;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+
+  svg {
+    color: #ffd4f6;
+    padding: 0.42rem;
+    border-radius: 12px;
+    background: linear-gradient(145deg, rgba(236, 72, 153, 0.32), rgba(139, 92, 246, 0.26));
+  }
+
+  h3 {
+    margin: 0.55rem 0 0;
+    font-size: 1rem;
+  }
+
+  p {
+    margin: 0.55rem 0 0;
+    color: var(--text-muted);
+  }
+}
+
+.skills-grid .method-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, #f9a8d4 56%, transparent);
+  box-shadow: 0 16px 30px rgba(118, 24, 80, 0.28);
+}
+
+@media (max-width: 860px) {
+  .skills-grid.method-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-container {
+    width: min(1180px, 94vw);
+    margin-top: 1.8rem;
+    padding: 1.2rem;
+  }
+}

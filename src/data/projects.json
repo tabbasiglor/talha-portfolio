@@ -1,0 +1,257 @@
+[
+  {
+    "id": "ai-implementation-program",
+    "title": "AI Implementation Program",
+    "meta": "Property management AI — 40+ organizations onboarded",
+    "metrics": [
+      "40+ client onboardings",
+      "9 event-triggered integration functions",
+      "Queue-safe and idempotent workers",
+      "Post-launch escalation ownership"
+    ],
+    "stack": [
+      "Cloud Functions Gen2",
+      "Cloud Run",
+      "NestJS",
+      "BullMQ",
+      "Redis",
+      "Gemini",
+      "OpenAI"
+    ],
+    "summary": "Property management companies were adopting AI to handle tenant communication, listing updates, and operational workflows. The problem was not the AI itself — it was everything around it. Integrations broke under real data. Jobs failed silently. Onboarding had no handoff. Built the integration layer, the job queue, and the full onboarding process that made it work in production for 40+ organizations.",
+    "flow": [
+      "Mapped each client's actual SOPs before configuring anything — not what they described in the brief, but what they were really doing day to day.",
+      "Built event-driven integrations against AppFolio, Yardi, Property Meld, and Epic PM so every automated action had a traceable trigger and a clear outcome.",
+      "Implemented BullMQ workers with retry logic, idempotency controls, and failure publishing so a partial failure on one job could not corrupt the next one in the queue.",
+      "Owned onboarding, go-live, post-launch tuning, and escalation as a single continuous responsibility — not separate hand-offs to separate people."
+    ],
+    "proof": [
+      "40+ organizations moved through the full implementation lifecycle with direct technical ownership at every stage.",
+      "9 event-triggered integration functions covering the core property management workflow — each with explicit lifecycle signaling.",
+      "Queue workers built for idempotency so retries were safe and failures were published, not swallowed.",
+      "LLM-assisted extraction converted unstructured client requests into structured operational payloads ready for downstream processing.",
+      "Post-launch support stayed active — not a hand-off to a support queue."
+    ]
+  },
+  {
+    "id": "qa-suite",
+    "title": "Testing Orchestration Suite",
+    "meta": "Hardware-adjacent QA for a physical immersive product",
+    "metrics": [
+      "18 spec files",
+      "93 CSV fixtures",
+      "6/6 pass in sampled run",
+      "BLE + core + UI + full suite routing"
+    ],
+    "stack": [
+      "Playwright",
+      "TypeScript",
+      "Node",
+      "Python",
+      "Shell"
+    ],
+    "summary": "MindGym is a physical product — a sensory isolation cube that runs biosensor-driven mental performance sessions for clients including the US Air Force and US Navy. A failed session is not a bug report; it is a real person in a room having a bad experience. Built the test suite that validated UI flows, BLE device communication, and biosensor pathways so releases were caught before they reached the hardware, not after.",
+    "flow": [
+      "Mapped every critical user journey into separate execution lanes: unit tests, core UI flows, BLE hardware communication, and full end-to-end suites — so a failure in one lane did not block the others.",
+      "Built config bootstrapping that auto-resolved local dependencies and validated required sample assets before any test run started — no more 'it worked on my machine' failures.",
+      "Standardized all reporting into machine-readable JSON so failure triage had data to work with, not just a pass/fail count.",
+      "Added failure screenshots, action logs, and manual quality checks for biosensor pathways where hardware state had to be verified before the test could be trusted."
+    ],
+    "proof": [
+      "18 spec files and 93 CSV fixtures covering unit, core UI, BLE, and full-suite execution lanes.",
+      "Sampled test-results.json: 6 expected, 0 unexpected, 6 passed.",
+      "Shell orchestration routes to lane-specific npm scripts with startup, cleanup, and portable environment targeting.",
+      "Playwright emits JSON artifacts per run for downstream analysis and captures screenshots on failure.",
+      "Hardware gates require manual quality confirmation for biosensor reliability before the session can proceed."
+    ]
+  },
+  {
+    "id": "signal-processing",
+    "title": "Realtime Signal Processing Engine",
+    "meta": "Biosensor data pipeline for live mental performance sessions",
+    "metrics": [
+      "24 test modules",
+      "7 websocket handlers",
+      "63 realtime components",
+      "Supervised shutdown paths"
+    ],
+    "stack": [
+      "Python",
+      "Socket.IO",
+      "AsyncIO",
+      "Signal DSP",
+      "SQLite"
+    ],
+    "summary": "MindGym sessions run on live biosensor data — heart rate, brainwave activity, physiological response. The signal processing pipeline is what turns raw sensor output into a usable session. If it starts incorrectly, degrades mid-session, or shuts down without closing properly, the experience breaks — and it breaks silently, with no indication of where things went wrong. Built the runtime that controls the full lifecycle: quality checks before a session starts, supervised async pipeline execution during, and controlled teardown with status emission at the end.",
+    "flow": [
+      "Bootstrapped the runtime with environment validation, database interface setup, and websocket client registration — so the system knew its own state before accepting any input.",
+      "Built event-driven handlers for each key lifecycle event: quality check, session start, and session stop — each with explicit state transitions and no shared mutable state between them.",
+      "Added pipeline supervision so the first failure in any async task triggered a controlled shutdown, not a silent hang.",
+      "Added post-session processing and status emission so upstream systems always received a clean signal that the session was done, regardless of how it ended."
+    ],
+    "proof": [
+      "24 test modules covering protocol handlers, transforms, filters, persistence, and supervisor behavior.",
+      "7 websocket handlers coordinating the full session lifecycle from quality check to teardown.",
+      "63 realtime components across the source tree, each with a defined role in the pipeline.",
+      "Pipeline supervisor catches first-failure events and executes controlled shutdown — silent failures are not possible.",
+      "Session start path composes dejitter, persistence, and optional biofeedback stages depending on session type."
+    ]
+  },
+  {
+    "id": "immersive-runtime",
+    "title": "Immersive Runtime and Content Delivery Stack",
+    "meta": "Launch automation for a hardware-driven immersive experience",
+    "metrics": [
+      "38 runtime scripts",
+      "332 presets",
+      "61 session definitions",
+      "Release and audio sync automation"
+    ],
+    "stack": [
+      "Node",
+      "Python",
+      "Shell",
+      "S3",
+      "OSC/REST"
+    ],
+    "summary": "The MindGym cube delivers synchronized light, audio, and content programs timed to each session type. Before this stack existed, setting up a session meant navigating a manual process where a missed step — wrong preset, stale content, port conflict on the controller — could silently break the experience minutes in. Built the scripts that turned launch day into a repeatable operation: provision dependencies, compile session content, sync media assets, boot controllers in the right order with the right configuration.",
+    "flow": [
+      "Defined idempotent setup scripts for all dependencies, content libraries, audio assets, and launch agents — run them in any order, on any machine, and get the same result.",
+      "Built release scripts that stamp versioned branches, sync artifacts to distribution, and maintain a moving latest-release pointer so rollback is one step.",
+      "Implemented a session compiler that merges timeline payloads, validates composition uniqueness, and normalizes autoplay and audio defaults — no more conflicting presets reaching the hardware.",
+      "Centralized controller startup with dependency checks and active-port cleanup so launch conflicts were eliminated before the session began."
+    ],
+    "proof": [
+      "38 scripts in the runtime project; 9 additional scripts in the content project handling release and audio operations.",
+      "332 presets and 61 session definitions in the current content inventory.",
+      "setup.sh runs an idempotent 10-step provisioning flow — no manual steps, no environment-specific exceptions.",
+      "Session compiler validates composition uniqueness and links audio assets before any content reaches the hardware.",
+      "Controller startup enforces dependency setup and clears conflicting processes before boot."
+    ]
+  },
+  {
+    "id": "mindgym-platform",
+    "title": "Full-Stack Session Platform",
+    "meta": "The web platform MindGym runs on — backend to frontend",
+    "metrics": [
+      "160 backend TypeScript modules",
+      "81 frontend TSX files",
+      "39 server specs",
+      "10 web routes"
+    ],
+    "stack": [
+      "TypeScript",
+      "Node",
+      "Socket.IO",
+      "Turbo",
+      "Yarn Workspaces"
+    ],
+    "summary": "Built the full-stack platform that MindGym operates on. The backend manages session lifecycle, sensor state, and immersive hardware control. The frontend gives clients a real-time view of session progress with the ability to start, pause, retry, or cancel at any point. The hard part was not the features — it was keeping everything synchronized under pressure: websocket failures mid-session, timeout handling, sensor state changes that had to propagate to the UI instantly or the session was lost.",
+    "flow": [
+      "Set up a Turbo monorepo with shared packages across the backend, app services, and web client — so a type change in one place propagated everywhere without manual syncing.",
+      "Implemented a socket gateway that enforced token authentication on connection and tracked active session membership throughout the session lifecycle.",
+      "Built service-level retry and reset paths for immersive initialization so a failed hardware handshake could recover without restarting the full session.",
+      "Connected frontend hooks directly to realtime socket events — quality check progress, session status, timeout handling — so the client always reflected actual system state."
+    ],
+    "proof": [
+      "160 backend TypeScript modules and 81 frontend TSX files in the current codebase.",
+      "39 server specs providing regression coverage across backend session logic.",
+      "Socket gateway enforces token checks and tracks active session membership throughout.",
+      "Typed websocket wrapper handles ack, timeout, and listener management — no raw event strings in application code.",
+      "Frontend hooks expose quality-check progress and session state with controlled start and cancel operations."
+    ]
+  },
+  {
+    "id": "infra-playbooks",
+    "title": "Ansible Environment Automation",
+    "meta": "Provisioning and security hardening across a mixed fleet",
+    "metrics": [
+      "38 hosts",
+      "dev / uat / prod tiers",
+      "macOS and EC2 role split",
+      "Security hardening included"
+    ],
+    "stack": [
+      "Ansible",
+      "YAML",
+      "Linux",
+      "macOS",
+      "SSH"
+    ],
+    "summary": "MindGym ran on a mixed fleet: macOS workstations in the physical installations, EC2 servers in the cloud, across development, UAT, and production environments — all provisioned manually, all drifting from each other over time. Built the Ansible playbooks that brought the fleet under version control: user accounts, SSH key management, firewall rules, and security hardening applied consistently across all 38 hosts regardless of who ran them or when.",
+    "flow": [
+      "Structured inventory by environment and host type so any playbook run could target exactly the right machines without touching the wrong ones.",
+      "Split provisioning into four focused roles — users, common, macos, ec2 — so changes to one did not require touching the others.",
+      "Automated the full user account lifecycle: provisioning, SSH key deployment, and deprovisioning — no manual steps, no forgotten access.",
+      "Applied security hardening layers to EC2 hosts including fail2ban, unattended upgrades, and log rotation — and enforced firewall, stealth mode, and remote login settings on macOS."
+    ],
+    "proof": [
+      "38 hosts tracked across dev, UAT, and prod with explicit ansible_host references and no manual overrides.",
+      "4 modular roles covering user lifecycle, shared config, macOS security posture, and EC2 hardening.",
+      "EC2 hardening templates deploy fail2ban and logrotate policies consistently across all server nodes.",
+      "macOS tasks enforce firewall, stealth mode, remote login restrictions, and timezone sync on all workstations."
+    ]
+  },
+  {
+    "id": "video-tool",
+    "title": "Video Knowledge Tool",
+    "meta": "Async video indexing and structured insight extraction",
+    "metrics": [
+      "FastAPI backend",
+      "Next.js frontend",
+      "Async indexing pipeline",
+      "Structured query output"
+    ],
+    "stack": [
+      "FastAPI",
+      "Python",
+      "Next.js",
+      "TypeScript"
+    ],
+    "summary": "Built a tool that takes a video file, indexes it asynchronously, and returns structured outputs — summary, transcript, timeline, key people — that a team can actually use. The design constraint was simple: it had to work on real-length videos without blocking, and the outputs had to be clean enough to pipe into something else without post-processing. No novelty demo. A working extraction pipeline with a usable frontend.",
+    "flow": [
+      "Built API routes for upload, indexing status, list, and query — each with a single responsibility and no shared state between them.",
+      "Implemented async indexing so a video upload returns immediately and the client polls for status without blocking the server.",
+      "Built the frontend workspace with an upload queue, live status polling, and a tabbed result view for summary, timeline, people, transcript, and export.",
+      "Designed the export path to return clean JSON so the outputs could be used downstream without any additional parsing."
+    ],
+    "proof": [
+      "Single FastAPI module handles upload, indexing, list, and query with no framework overhead.",
+      "Async task layer processes video indexing without blocking the request lifecycle.",
+      "Frontend polling keeps the UI reactive during long indexing runs without manual refresh.",
+      "Export channel returns structured JSON ready for downstream use.",
+      "Two TSX interfaces cover the upload dashboard and the query workspace independently."
+    ]
+  },
+  {
+    "id": "adoption-architecture",
+    "title": "Tool-Agnostic AI Adoption Architecture",
+    "meta": "The operating model behind every engagement",
+    "metrics": [
+      "Works across any AI toolchain",
+      "Context expansion before execution",
+      "Evidence-backed delivery",
+      "Teams own it after launch"
+    ],
+    "stack": [
+      "Claude Cowork",
+      "Codex",
+      "Cursor",
+      "Openclawd / Moltbot",
+      "MCP tooling"
+    ],
+    "summary": "Most AI adoption breaks at the brief. A stakeholder says what they want, a builder takes it at face value, and the gap between intent and implementation only becomes visible after something ships that does not work. This is the operating model built to prevent that: expand the brief before touching any tool, surface the hidden constraints, define an exact execution contract, build across whatever toolchain fits the workstream, and deliver with enough documentation that the team can run it independently after launch.",
+    "flow": [
+      "Take the raw brief and expand it — not just what was asked, but what was assumed, what is missing, what will break in production if left unaddressed.",
+      "Translate the expanded context into an implementation narrative: exact process steps, dependencies, acceptance criteria, and what done actually looks like.",
+      "Execute across the best-fit agent and tool pair for each workstream — not one tool for everything, the right tool for each job.",
+      "Deliver with runbooks, escalation paths, and traceable proof so the team does not need ongoing support to keep the system running."
+    ],
+    "proof": [
+      "Operating model explicitly designed for incomplete briefs — terse input is not a blocker, it is the starting condition.",
+      "Every engagement produces implementation artifacts, not strategy decks.",
+      "Tool selection is driven by workstream fit — used across Claude Cowork, Codex, Cursor, Openclawd/Moltbot, and MCP tooling on the same engagements.",
+      "Post-launch independence is a delivery requirement, not a nice-to-have."
+    ]
+  }
+]

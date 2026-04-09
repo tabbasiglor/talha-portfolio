@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  font-size: 1.03rem;
+  line-height: 1.58;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #130628;
+}
+
+code {
+  font-family: "JetBrains Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.main-container {
+  --accent: #d946ef;
+  --accent-2: #8b5cf6;
+  --action: #ec4899;
+  --text-primary: #f8f5ff;
+  --text-muted: #d9ccf2;
+  --surface: rgba(78, 28, 124, 0.34);
+  --surface-soft: rgba(124, 58, 173, 0.24);
+  --line: rgba(236, 72, 153, 0.28);
+  --bg-base: #1a0a2e;
+  --bg-deep: #2d114d;
+  --chip-bg: rgba(216, 180, 254, 0.17);
+  --chip-text: #f8e8ff;
+  --chip-border: rgba(236, 72, 153, 0.34);
+  --shadow: 0 22px 48px rgba(10, 4, 19, 0.45);
+  --ring: rgba(236, 72, 153, 0.45);
+
+  position: relative;
+  min-height: 100vh;
+  color: var(--text-primary);
+  background: linear-gradient(160deg, var(--bg-base), var(--bg-deep));
+  isolation: isolate;
+  overflow-x: clip;
+}
+
+.main-container::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("./assets/images/figma-gradient-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.main-container::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 16% 14%, rgba(249, 168, 212, 0.2), transparent 38%),
+    radial-gradient(circle at 82% 68%, rgba(147, 51, 234, 0.18), transparent 44%),
+    linear-gradient(165deg, rgba(15, 8, 28, 0.7), rgba(22, 7, 39, 0.78));
+  z-index: -1;
+  pointer-events: none;
+}
+
+.dark-mode {
+  --text-primary: #ffffff;
+  --text-muted: #dac7f4;
+  --surface: rgba(45, 17, 77, 0.56);
+  --surface-soft: rgba(76, 29, 149, 0.38);
+  --line: rgba(244, 114, 182, 0.33);
+  --bg-base: #130626;
+  --bg-deep: #1a0a2e;
+  --chip-bg: rgba(168, 85, 247, 0.19);
+  --chip-text: #fbe9ff;
+  --chip-border: rgba(244, 114, 182, 0.37);
+  --shadow: 0 24px 52px rgba(7, 3, 14, 0.62);
+  --ring: rgba(249, 168, 212, 0.5);
+}
+
+.light-mode {
+  --text-primary: #fdfbff;
+  --text-muted: #dfd0f7;
+  --surface: rgba(103, 33, 173, 0.3);
+  --surface-soft: rgba(147, 51, 234, 0.2);
+  --line: rgba(249, 168, 212, 0.32);
+  --bg-base: #2a1150;
+  --bg-deep: #3f1a73;
+  --chip-bg: rgba(236, 72, 153, 0.16);
+  --chip-text: #ffeafe;
+  --chip-border: rgba(249, 168, 212, 0.37);
+  --shadow: 0 20px 46px rgba(11, 5, 20, 0.5);
+  --ring: rgba(249, 168, 212, 0.48);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+label,
+button,
+li,
+span {
+  color: var(--text-primary);
+}
+
+.section-kicker {
+  margin: 0;
+  color: #f9a8d4;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+}
+
+.section-subtext {
+  margin-top: 0.68rem;
+  color: var(--text-muted);
+  max-width: 72ch;
+}
+
+.navigation-bar {
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background-color 180ms ease, border-color 180ms ease, backdrop-filter 180ms ease;
+  padding: 0.56rem 1rem;
+}
+
+.navbar-fixed-top {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.navbar-fixed-top.scrolled {
+  background: color-mix(in srgb, var(--bg-base) 76%, transparent) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 90%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.navigation-bar .brand-mark {
+  margin-right: 1rem;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  font-size: 1.04rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #ffd4f6;
+}
+
+.navigation-bar .nav-item {
+  color: var(--text-muted) !important;
+  font-size: 0.94rem;
+  font-weight: 600;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  text-transform: none;
+  padding: 0.38rem 0.68rem;
+  border-radius: 999px;
+}
+
+.navigation-bar .nav-item:hover,
+.navigation-bar .nav-item:focus-visible {
+  color: #fff !important;
+  background: color-mix(in srgb, var(--surface-soft) 80%, transparent);
+}
+
+.navigation-bar svg {
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.navigation-bar-responsive {
+  background: color-mix(in srgb, var(--bg-base) 88%, transparent);
+  min-height: 100%;
+}
+
+.navigation-bar-responsive span,
+.navigation-bar-responsive p {
+  color: var(--text-primary);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.mobile-menu-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.container {
+  margin-top: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.items-container {
+  padding: 5% 9%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+}
+
+h2,
+h3,
+h4,
+button {
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+}
+
+button,
+a {
+  transition: background-color 130ms ease, color 130ms ease, border-color 130ms ease, transform 130ms ease;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+  .items-container {
+    padding: 6% 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .items-container {
+    padding: 7% 5%;
+  }
+
+  .navigation-bar .brand-mark {
+    font-size: 0.92rem;
+  }
+}
