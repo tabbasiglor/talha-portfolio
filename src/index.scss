@@ -12,6 +12,10 @@ body,
   min-height: 100%;
 }
 
+html:has(.cv-page) {
+  background: #2d114d;
+}
+
 body {
   font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
   font-size: 1.03rem;
