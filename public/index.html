@@ -7,14 +7,27 @@
     <meta name="theme-color" content="#1d4ed8" />
     <meta
       name="description"
-      content="Talha Faisal helps companies move AI from pilot to production through workflow redesign, implementation architecture, and operator-ready rollout."
+      content="Talha Abbasi helps companies move AI from pilot to production through workflow redesign, implementation architecture, and operator-ready rollout."
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Talha Faisal | AI Adoption Implementation</title>
+    <title>Talha Abbasi | AI Adoption Implementation</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      // GitHub Pages SPA: restore path encoded by 404.html
+      (function(l) {
+        if (l.search[1] === 'p' && l.search.indexOf('?p=/') === 0) {
+          var decoded = l.search.slice(1).split('&').map(function(s) {
+            return s.replace(/~and~/g, '&');
+          }).join('?');
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location));
+    </script>
   </body>
 </html>

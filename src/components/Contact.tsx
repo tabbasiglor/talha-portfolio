@@ -1,8 +1,17 @@
-import React from "react";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import React, { useEffect } from "react";
 import "../assets/styles/Contact.scss";
 
 function Contact() {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div id="contact">
       <div className="items-container">
@@ -15,14 +24,11 @@ function Contact() {
             takes to get to production. No pitch. Most clients who move forward do so within a week.
           </p>
 
-          <div className="contact-actions">
-            <a className="contact-btn" href="mailto:talhafaisalglor@gmail.com">
-              <MailOutlineIcon /> Book an audit call
-            </a>
-            <a className="contact-btn contact-btn-secondary" href="#projects">
-              Review the work first
-            </a>
-          </div>
+          <div
+            className="calendly-inline-widget"
+            data-url="https://calendly.com/tabbasiglor/30min?background_color=2d114d&text_color=f8f5ff&primary_color=ec4899"
+            style={{ width: "100%", minWidth: "320px", height: "750px" }}
+          />
         </div>
       </div>
     </div>

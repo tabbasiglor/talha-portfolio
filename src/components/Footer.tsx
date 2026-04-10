@@ -6,11 +6,11 @@ function Footer() {
   return (
     <footer>
       <div className="footer-icons">
-        <a href="mailto:talhafaisalglor@gmail.com" aria-label="Email Talha Faisal">
+        <a href="mailto:tabbasiglor@gmail.com" aria-label="Email Talha Abbasi">
           <MailOutlineIcon />
         </a>
       </div>
-      <p>Talha Faisal • AI Adoption Implementation Systems</p>
+      <p>Talha Abbasi • AI Adoption Implementation Systems</p>
     </footer>
   );
 }

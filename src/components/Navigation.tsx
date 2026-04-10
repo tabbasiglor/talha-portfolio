@@ -100,7 +100,7 @@ function Navigation({ parentToChild, modeChange }: NavigationProps) {
           </IconButton>
 
           <Typography className="brand-mark" variant="h6" component="div">
-            Talha Faisal
+            Talha Abbasi
           </Typography>
 
           <Box sx={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>

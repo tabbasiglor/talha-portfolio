@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talha Faisal | CV</title>
+  <meta name="description" content="CV of Talha Faisal: technical writer, QA engineer, and AI implementation specialist with nine years across documentation, automation, and production systems." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-base: #1a0a2e;
+      --bg-deep: #2d114d;
+      --surface: rgba(78, 28, 124, 0.34);
+      --surface-soft: rgba(124, 58, 173, 0.24);
+      --line: rgba(236, 72, 153, 0.28);
+      --text-primary: #f8f5ff;
+      --text-muted: #d9ccf2;
+      --text-faint: #b8a8d8;
+      --accent: #ec4899;
+      --accent-2: #8b5cf6;
+      --chip-bg: rgba(216, 180, 254, 0.17);
+      --chip-border: rgba(236, 72, 153, 0.34);
+      --shadow: 0 22px 48px rgba(10, 4, 19, 0.45);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      background: linear-gradient(160deg, var(--bg-base), var(--bg-deep));
+      color: var(--text-primary);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(26, 10, 46, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      background: linear-gradient(90deg, #fbcfe8, #c4b5fd);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .nav-links a.back-link {
+      color: #f9a8d4;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .nav-links a.back-link::before { content: "←"; }
+
+    /* ── PRINT BUTTON ── */
+    .print-btn {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--chip-border);
+      background: var(--chip-bg);
+      color: var(--text-primary);
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: background 0.15s;
+    }
+
+    .print-btn:hover {
+      background: rgba(216, 180, 254, 0.28);
+    }
+
+    /* ── PAGE WRAPPER ── */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 6rem;
+    }
+
+    /* ── HEADER ── */
+    .cv-header {
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 2.5rem;
+    }
+
+    .cv-header .eyebrow {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #f9a8d4;
+      margin-bottom: 0.6rem;
+    }
+
+    .cv-header h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.05;
+      background: linear-gradient(90deg, #fbcfe8, #c4b5fd 52%, #f9a8d4);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.8rem;
+    }
+
+    .cv-header .tagline {
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      color: #f2e8ff;
+      max-width: 58ch;
+      margin-bottom: 1.4rem;
+      line-height: 1.5;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+    }
+
+    .contact-row a, .contact-row span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .contact-row a:hover { color: #f9a8d4; }
+
+    .contact-row .sep { color: var(--line); user-select: none; }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .stat-card {
+      padding: 0.9rem 1rem;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .stat-card .val {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fdf3ff;
+    }
+
+    .stat-card .lbl {
+      font-size: 0.8rem;
+      color: var(--text-faint);
+      margin-top: 0.15rem;
+    }
+
+    /* ── SECTION HEADINGS ── */
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-label {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #f9a8d4;
+      margin-bottom: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .section-label::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    /* ── PROFILE ── */
+    .profile-text {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.7;
+      max-width: 76ch;
+    }
+
+    .profile-text p + p { margin-top: 0.9rem; }
+
+    /* ── EXPERIENCE ENTRIES ── */
+    .exp-entry {
+      margin-bottom: 2.6rem;
+      padding-bottom: 2.6rem;
+      border-bottom: 1px solid rgba(236, 72, 153, 0.12);
+    }
+
+    .exp-entry:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .exp-top {
+      margin-bottom: 1rem;
+    }
+
+    .exp-company {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.15rem;
+    }
+
+    .exp-role {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #f9a8d4;
+      margin-bottom: 0.2rem;
+    }
+
+    .exp-meta {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      color: var(--text-faint);
+    }
+
+    .exp-context {
+      font-size: 0.88rem;
+      color: var(--text-faint);
+      font-style: italic;
+      margin: 0.6rem 0 1rem;
+      max-width: 72ch;
+      line-height: 1.55;
+    }
+
+    .exp-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+      max-width: 72ch;
+      margin-bottom: 1rem;
+    }
+
+    .exp-points {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .exp-points li {
+      padding-left: 1.1rem;
+      position: relative;
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      line-height: 1.65;
+      max-width: 72ch;
+    }
+
+    .exp-points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ec4899, #8b5cf6);
+    }
+
+    .point-label {
+      font-weight: 700;
+      color: var(--text-primary);
+      display: inline;
+    }
+
+    /* ── FREELANCE ── */
+    .freelance-entry {
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.8rem;
+      border-bottom: 1px solid rgba(236, 72, 153, 0.10);
+    }
+
+    .freelance-entry:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .freelance-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .freelance-company {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--text-primary);
+    }
+
+    .freelance-role {
+      font-size: 0.85rem;
+      color: #f9a8d4;
+      font-weight: 600;
+    }
+
+    .freelance-meta {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.75rem;
+      color: var(--text-faint);
+    }
+
+    .freelance-entry p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.65;
+      max-width: 72ch;
+    }
+
+    /* ── ADDITIONAL PROJECTS ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .project-card {
+      padding: 1.1rem 1.2rem;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .project-card h4 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .skill-group h4 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f9a8d4;
+      margin-bottom: 0.55rem;
+    }
+
+    .skill-group p {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.79rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ── EDUCATION ── */
+    .edu-entry {
+      display: flex;
+      gap: 1rem;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .edu-degree {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--text-primary);
+    }
+
+    .edu-school {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-faint);
+    }
+
+    footer a {
+      color: #f9a8d4;
+      text-decoration: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      :root {
+        --bg-base: #fff;
+        --bg-deep: #fff;
+        --surface: #f8f5ff;
+        --text-primary: #0f0a1e;
+        --text-muted: #3d2b5e;
+        --text-faint: #6b5a8a;
+        --line: #ddd;
+        --chip-bg: #f0eaf8;
+        --chip-border: #c4b5fd;
+      }
+
+      body {
+        background: #fff;
+        color: #0f0a1e;
+        font-size: 9.5pt;
+      }
+
+      nav, .print-btn { display: none; }
+
+      .page { padding: 1.5cm 1.5cm 2cm; max-width: 100%; }
+
+      .cv-header h1 {
+        background: none;
+        -webkit-background-clip: unset;
+        background-clip: unset;
+        color: #0f0a1e;
+      }
+
+      .stat-card, .project-card { background: #f8f5ff; border-color: #ddd; }
+
+      .exp-entry, .freelance-entry { break-inside: avoid; }
+
+      .section-label::after { background: #ddd; }
+
+      a { color: inherit; text-decoration: none; }
+
+      .section-label { color: #6b21a8; }
+      .exp-role, .freelance-role { color: #7c3aed; }
+      .skill-group h4 { color: #7c3aed; }
+      .eyebrow { color: #7c3aed; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="../">Talha Faisal</a>
+    <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="../#contact">Book a call</a></li>
+      <li><a class="back-link" href="../">Portfolio</a></li>
+    </ul>
+    <button class="print-btn" onclick="window.print()">Save PDF</button>
+  </div>
+</nav>
+
+<!-- PAGE -->
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="cv-header">
+    <p class="eyebrow">Curriculum Vitae</p>
+    <h1>Talha Faisal</h1>
+    <p class="tagline">Nine years at the boundary between technical systems and the people who operate them. Documentation, QA automation, and AI implementation across hardware, identity, enterprise software, and property management.</p>
+    <div class="contact-row">
+      <a href="mailto:talhafaisalglor@gmail.com">talhafaisalglor@gmail.com</a>
+      <span class="sep">·</span>
+      <span>Islamabad, Pakistan</span>
+      <span class="sep">·</span>
+      <span>Global / Remote</span>
+      <span class="sep">·</span>
+      <a href="https://tabbasiglor.github.io/talha-portfolio/" target="_blank">Portfolio</a>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="val">9</div>
+      <div class="lbl">Years in industry</div>
+    </div>
+    <div class="stat-card">
+      <div class="val">40+</div>
+      <div class="lbl">Clients onboarded end-to-end</div>
+    </div>
+    <div class="stat-card">
+      <div class="val">6</div>
+      <div class="lbl">Companies, full-time</div>
+    </div>
+    <div class="stat-card">
+      <div class="val">140+</div>
+      <div class="lbl">Countries served (Pitcher AG)</div>
+    </div>
+  </div>
+
+  <!-- PROFILE -->
+  <section class="section" id="profile">
+    <div class="section-label">Profile</div>
+    <div class="profile-text">
+      <p>Started documenting heavy-duty truck fault codes for fleet mechanics. Moved into enterprise documentation for a global sales enablement platform deployed in 140 countries. Then developer documentation for a digital identity platform built on OAuth 2.0 and UMA 2.0. Then internal operations knowledge for one of the world's largest supplier risk management platforms.</p>
+      <p>The pivot into QA came at Lumena Labs, where owning the technical documentation and building the Playwright test automation suite became the same job in practice: writing the process exposed the gaps, running the tests generated the runbooks. That led directly to a role at Super, building production AI automation pipelines for residential property management and personally owning client onboarding for 40+ companies.</p>
+      <p>The consistent thread: work that sits at the boundary between technical systems and the people who use them. Build the thing. Then make sure the right people know how to operate it, at a level of depth that actually moves things forward. New tools, new platforms, and new problem domains have never been an obstacle. They are how every role here expanded into the next.</p>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
+    <div class="section-label">Experience</div>
+
+    <!-- Super -->
+    <div class="exp-entry">
+      <div class="exp-top">
+        <div class="exp-company">Super</div>
+        <div class="exp-role">Automation &amp; AI Implementation Specialist</div>
+        <div class="exp-meta">Sep 2025 – Present &nbsp;·&nbsp; Remote</div>
+      </div>
+      <p class="exp-context">AI communication and workflow automation platform for residential property management. Handles inbound and outbound voice, SMS, and email agents synced with AppFolio, Yardi, and other property management software.</p>
+      <ul class="exp-points">
+        <li>
+          <span class="point-label">Integration architecture.</span> Designed and maintained the Cloud Functions Gen2 and Cloud Run integration layer connecting Super's AI workflows to AppFolio, Yardi, Property Meld, Epic PM, Vendoroo, and Buildium. Nine event-triggered functions cover listing data scraping, record synchronization, and outbound push integrations. Built around Google Pub/Sub with typed CloudEvents carrying explicit lifecycle states (initiated, completed, failed), so every automated action leaves a traceable audit trail from trigger to outcome.
+        </li>
+        <li>
+          <span class="point-label">Service and queue architecture.</span> Built NestJS service modules and BullMQ + Redis-backed queue workers for background processing, retry behavior, queue scheduling, and sync job orchestration across integration pipelines. Worker behavior is retry-safe and idempotent by design: schema validation at ingestion, structured failure publishing, and explicit edge-state handling so partial failures don't silently corrupt downstream records.
+        </li>
+        <li>
+          <span class="point-label">Third-party UI automation.</span> Shipped Playwright and TypeScript automation flows for operations inside property management systems that expose no API surface, covering session handling, OTP and 2FA flows, dynamic field detection, multi-step form fill, conditional submission logic, and error-state recovery. Tested with Jest across both unit and integration layers.
+        </li>
+        <li>
+          <span class="point-label">AI extraction and mapping.</span> Implemented AI-assisted data mapping and extraction flows using Gemini and OpenAI, converting unstructured maintenance requests, voicemails, and conversation transcripts into structured payloads that downstream property management systems can ingest.
+        </li>
+        <li>
+          <span class="point-label">Voice and communication orchestration.</span> Worked on the API-side handoff logic governing call, SMS, and email routing: Twilio and LiveKit voice conference workflows, transfer-oriented orchestration, SendGrid thread-aware email notifications, parallel multi-channel action execution, and the eventing that connects call outcomes to downstream workflow state.
+        </li>
+        <li>
+          <span class="point-label">Operational knowledge systems.</span> Built and maintained the XML and Markdown-based knowledge bases that train Super's AI agents on client-specific behavior: escalation rules, emergency triage logic, transfer routing, and the operational nuances of how individual property management companies run their workflows.
+        </li>
+        <li>
+          <span class="point-label">Client onboarding.</span> Owned the full client lifecycle for 40+ property management companies: scoping, integration setup, AI agent training, go-live, and post-launch tuning based on real production feedback. Served as the ongoing technical point of contact for escalations after launch.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Lumena Labs -->
+    <div class="exp-entry">
+      <div class="exp-top">
+        <div class="exp-company">Lumena Labs</div>
+        <div class="exp-role">QA Lead &amp; Technical Writer</div>
+        <div class="exp-meta">Aug 2023 – Sep 2025 &nbsp;·&nbsp; Remote</div>
+      </div>
+      <p class="exp-context">Neuroscience and mental performance company behind MindGym, a physical immersive training environment used by the U.S. Air Force, U.S. Navy, commercial aviation operators, and corporate wellness programs. Clients include research institutions, defense organizations, and commercial wellness programs.</p>
+      <ul class="exp-points">
+        <li>
+          <span class="point-label">Playwright test frameworks.</span> Designed and built the complete TypeScript and Playwright automation suite for Lumena Cloud and Lumena Edge from scratch, across 19 active spec files covering role-based user journeys, session lifecycle flows, analytics-critical paths, error and recovery scenarios, and hardware-aware execution paths.
+        </li>
+        <li>
+          <span class="point-label">Hardware-aware test orchestration.</span> Some test scenarios require physical biosensor hardware to be powered on remotely. Built a custom n8n workflow that detects when a Playwright run reaches a hardware dependency, fires a Slack message to whoever is in the office asking them to press the power button on the biosensor, pauses test execution, and waits for a "done" reply before continuing. Turned previously untestable scenarios into automatable ones.
+        </li>
+        <li>
+          <span class="point-label">CI/CD integration and reporting.</span> Integrated the full test suite into GitHub Actions pipelines with automated execution on push, structured per-step logging, deterministic failure summaries, and escalation hooks via Slack alerts and Jira ticket creation. Reduced manual QA effort by roughly 40% and surfaced more than 30 critical issues earlier in the release cycle.
+        </li>
+        <li>
+          <span class="point-label">Analytics and data validation.</span> Built validation workflows that compare dashboard-level analytics values against exported report data to catch calculation discrepancies before they affect billing or performance reporting.
+        </li>
+        <li>
+          <span class="point-label">Ansible infrastructure management.</span> Contributed to Ansible-based operations across a fleet of 38 managed hosts: 29 production macOS edge nodes, 5 development machines, 1 UAT environment, and 3 EC2 instances. Work covered reusable role patterns for package management, SSH provisioning, user configuration, security hardening, and environment consistency across a mixed macOS and Linux deployment.
+        </li>
+        <li>
+          <span class="point-label">Documentation and runbooks.</span> Authored developer documentation for Spruce Bot using Eleventy. Produced release plans, release notes, QA promotion checklists, and environment readiness documentation each release cycle. Wrote edge operational runbooks covering firmware update procedures, VPN and router configuration, network diagnostics, and stability troubleshooting for production hosts in the field.
+        </li>
+      </ul>
+    </div>
+
+    <!-- apexanalytix -->
+    <div class="exp-entry">
+      <div class="exp-top">
+        <div class="exp-company">apexanalytix</div>
+        <div class="exp-role">Technical Writer</div>
+        <div class="exp-meta">Sep 2023 – Jun 2024 &nbsp;·&nbsp; Remote</div>
+      </div>
+      <p class="exp-context">World's leading supplier onboarding, risk management, and overpayment recovery platform, protecting over $9 trillion in annual spend for 300+ Fortune 500 and Global 2000 companies. Documentation audience: procurement professionals at IBM, Microsoft, Procter &amp; Gamble, and General Electric.</p>
+      <ul class="exp-points">
+        <li>
+          <span class="point-label">Internal operations documentation.</span> Created user guides, training materials, FAQs, and knowledge base articles for Supplier Relationship Managers, Procurement Managers, and Supply Chain Managers working within enterprise client organizations. The apexportal platform covers supplier onboarding, compliance monitoring, risk scoring, master data management, and payment controls.
+        </li>
+        <li>
+          <span class="point-label">Product fluency and validation.</span> Developed working knowledge of apexportal's full capability set: supplier lifecycle management, continuous monitoring against financial and cyber risk signals, master data governance, and controls that prevent duplicate payments and fraud across multi-billion-dollar accounts payable environments. Validated all documentation against real platform behavior with subject matter experts and product teams before publication.
+        </li>
+        <li>
+          <span class="point-label">Multi-audience content architecture.</span> Structured the knowledge base to serve multiple user types from the same content without redundancy, accommodating different entry points for procurement managers and supply chain risk analysts without creating parallel content tracks that diverge over time.
+        </li>
+      </ul>
+    </div>
+
+    <!-- IDENTOS -->
+    <div class="exp-entry">
+      <div class="exp-top">
+        <div class="exp-company">IDENTOS</div>
+        <div class="exp-role">Technical Writer</div>
+        <div class="exp-meta">Aug 2022 – Aug 2023 &nbsp;·&nbsp; Toronto, ON (Remote)</div>
+      </div>
+      <p class="exp-context">Digital identity and access management company. Built the Federated Privacy Exchange (FPX), extending the UMA 2.0 standard for fine-grained API authorization and consented data exchange across federated networks, on OAuth 2.0, OIDC, SAML, LDAP, and FIDO. Deployments in healthcare, financial services, and government.</p>
+      <ul class="exp-points">
+        <li>
+          <span class="point-label">Developer documentation.</span> Created and maintained developer-facing documentation for the full FPX platform: authorization server setup, resource server onboarding including the Resource Server Adapter for non-FHIR data sources, consent flow architecture, digital wallet integration, and API reference material. Worked directly with engineers and the CTO to understand how FPX components interact at a protocol level before writing documentation developers could follow.
+        </li>
+        <li>
+          <span class="point-label">API reference and integration guides.</span> Wrote API documentation for FPX's Authorization Server, Wallet Server, and Resource Server Adapter, covering request and response structures, authentication flows, error states, and end-to-end integration sequences.
+        </li>
+        <li>
+          <span class="point-label">User-to-User Delegation guide.</span> Led documentation for User-to-User Delegation in FPX Vale: a feature that lets one user grant another delegated access to protected resources while maintaining privacy controls and audit integrity. The guide covered technical architecture, configuration steps, code samples, and real-world scenarios for both developer and end-user audiences, with custom illustrations developed alongside the design team.
+        </li>
+        <li>
+          <span class="point-label">Release cadence documentation.</span> Produced release notes and technical documentation aligned with each product release, including the FPX Junction release introducing W3C Verifiable Credentials support and enhanced UMA 2.0 compliance. Documentation shipped with or before each release.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Pitcher AG -->
+    <div class="exp-entry">
+      <div class="exp-top">
+        <div class="exp-company">Pitcher AG</div>
+        <div class="exp-role">Technical Writer</div>
+        <div class="exp-meta">Jun 2019 – Aug 2022 &nbsp;·&nbsp; Remote</div>
+      </div>
+      <p class="exp-context">Enterprise sales enablement and customer engagement platform. Mobile-first Super App integrating CRM, ERP, and content management, deployed in 140+ countries. Clients include Nestlé, Pfizer, ExxonMobil, Procter &amp; Gamble, and Diageo. Joined as the company's first dedicated technical writer.</p>
+      <ul class="exp-points">
+        <li>
+          <span class="point-label">Documentation infrastructure from scratch.</span> Worked directly with the CTO to design and implement a documentation system for Pitcher's global scale. Used Confluence as the authoring backend, then built the public-facing documentation portal at helpdocs.pitcher.com as a branded interface pulling from Confluence. Designed the full information architecture: content taxonomy, page hierarchy, navigation structure, and publishing workflow, with no prior framework to build from.
+        </li>
+        <li>
+          <span class="point-label">Platform documentation across verticals.</span> Wrote and maintained documentation covering the entire Pitcher platform: configuration, CRM and ERP integrations, mobile app usage for field reps, administrator guides, content management workflows, multi-channel engagement features, and compliance capabilities. Documentation had to work for audiences ranging from IT administrators to pharmaceutical field reps.
+        </li>
+        <li>
+          <span class="point-label">Scale and regulatory complexity.</span> Documentation served 140+ countries across heavily regulated industries. Life sciences and pharma clients have compliance requirements around what field reps can present in customer-facing interactions; documentation had to reflect those constraints accurately without being so configuration-specific it became unmanageable as the product line expanded.
+        </li>
+        <li>
+          <span class="point-label">Collaborative release process.</span> Worked with the CTO, product managers, and engineering to understand platform changes before they shipped, so documentation was ready at launch. A documentation gap at this scale doesn't affect one user; it creates support demand across dozens of client organizations simultaneously.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Diesel Laptops -->
+    <div class="exp-entry">
+      <div class="exp-top">
+        <div class="exp-company">Diesel Laptops</div>
+        <div class="exp-role">Technical Writer</div>
+        <div class="exp-meta">Mar 2017 – Jun 2019 &nbsp;·&nbsp; Remote</div>
+      </div>
+      <p class="exp-context">Heavy-duty truck diagnostic hardware and software, providing OEM-level fault code coverage for commercial fleets, independent technicians, and dealerships across North America. Covers Cummins, Detroit Diesel, Caterpillar, Volvo, Mack, International, Peterbilt, and Kenworth.</p>
+      <ul class="exp-points">
+        <li>
+          <span class="point-label">Fault code documentation.</span> Documented the fault code library in depth across multiple OEM platforms and engine families. For each diagnostic trouble code: the system or sensor it relates to, the conditions under which it sets and clears, probable causes ranked by likelihood, and step-by-step troubleshooting procedures. The guide had to be usable in the field, by someone working alone under time pressure, without needing to call support for clarification.
+        </li>
+        <li>
+          <span class="point-label">End-user platform documentation.</span> Wrote user guides for the diagnostic hardware and software itself, covering how to connect via RP1210-compliant adapters, navigating the diagnostic platform, running forced DPF regenerations and bi-directional commands, reading live data streams, and interpreting diagnostic output across different OEM software environments.
+        </li>
+        <li>
+          <span class="point-label">Multi-manufacturer complexity.</span> Heavy-duty truck diagnostics is inherently complex because each OEM (Detroit Diesel Diagnostic Link, Cummins Insite, Caterpillar ET) has its own fault code conventions and diagnostic protocol implementation. Documentation had to reflect those differences accurately without becoming so manufacturer-specific that guides became unmanageable as the product line expanded.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FREELANCE -->
+  <section class="section" id="freelance">
+    <div class="section-label">Freelance &amp; Contract Work</div>
+    <p style="font-size:0.88rem; color: var(--text-faint); margin-bottom: 1.6rem; max-width: 68ch;">Independent work carried on alongside full-time roles, across writing, content operations, and AI tooling.</p>
+
+    <div class="freelance-entry">
+      <div class="freelance-header">
+        <span class="freelance-company">SpreadsheetPoint.com</span>
+        <span class="freelance-role">Lead Content Writer</span>
+        <span class="freelance-meta">2017 – 2022</span>
+      </div>
+      <p>Led a team of writers producing tutorials, how-to articles, and video walkthroughs on Google Sheets, Docs, Slides, and related Workspace tools. Went beyond writing: analyzed engagement metrics and user feedback to identify content gaps, shape the editorial calendar, and drive format changes that improved reader retention and return visits.</p>
+    </div>
+
+    <div class="freelance-entry">
+      <div class="freelance-header">
+        <span class="freelance-company">WithHoist</span>
+        <span class="freelance-role">Technical Writer (Contract)</span>
+        <span class="freelance-meta">2018 – 2020</span>
+      </div>
+      <p>Developed a 144-lesson training program taking someone with no industry background into a functioning residential painting business, covering business formation, job estimating, operations, staffing, marketing, and client acquisition. Worked with industry subject matter experts on operational accuracy, then sequenced the content so skills built progressively.</p>
+    </div>
+
+    <div class="freelance-entry">
+      <div class="freelance-header">
+        <span class="freelance-company">AutomationStop / DoSupply</span>
+        <span class="freelance-role">Technical Writer (Contract)</span>
+        <span class="freelance-meta">2018 – 2021</span>
+      </div>
+      <p>Built and maintained a product documentation library for industrial automation components: PLCs, variable frequency drives, motors, sensors, and HMIs. The audience was engineers and procurement specialists, so technical accuracy in specifications, compatibility notes, and installation context was essential.</p>
+    </div>
+
+    <div class="freelance-entry">
+      <div class="freelance-header">
+        <span class="freelance-company">Postman Academy</span>
+        <span class="freelance-role">Content Developer (Contract)</span>
+        <span class="freelance-meta">Dec 2022 – Feb 2023</span>
+      </div>
+      <p>Curriculum expansion contract concurrent with the IDENTOS role. Created new learning modules covering API testing workflows, collection structure and organization, environment management, and Postman automation patterns. Structured content around practical exercises rather than passive explanation.</p>
+    </div>
+
+    <div class="freelance-entry" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+      <div class="freelance-header">
+        <span class="freelance-company">Silicon Valley startups</span>
+        <span class="freelance-role">Customer success, documentation, community</span>
+        <span class="freelance-meta">Various periods</span>
+      </div>
+      <p>Worked with multiple early-stage companies including Bardeen, Notis, Redactable, Jotform, and Testimonial.to across customer success, user-facing documentation, and direct community and support interactions. Early-stage support is different from enterprise support: the product is changing, users are early adopters with high expectations, and support feedback directly shapes what gets built next.</p>
+    </div>
+  </section>
+
+  <!-- ADDITIONAL PROJECTS -->
+  <section class="section" id="projects">
+    <div class="section-label">Additional Projects</div>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h4>AI video analysis tool</h4>
+        <p>Node.js application powered by the Gemini API. Accepts any video upload and produces a full content breakdown: frame-by-frame visual analysis, automated screenshot extraction of key moments, a complete narrative summary, and audio transcription. Built to extract the substance of long recordings without watching them in full.</p>
+      </div>
+      <div class="project-card">
+        <h4>Make.com workflow automation</h4>
+        <p>Designed and built large-scale automation workflows connecting Notion, Slack, Google Drive, and other tools for client teams. A representative example: a single button click in a Notion database triggers record updates, Slack notifications, Drive file creation, and status sync across all connected tools, replacing manual coordination steps.</p>
+      </div>
+      <div class="project-card">
+        <h4>Claude Cowork and AI skill systems</h4>
+        <p>Built extensive custom skills and workflow configurations in Claude Cowork, OpenClaw, and Codex, designing skills, knowledge systems, and AI-assisted workflows for operational use cases across client organizations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="section-label">Skills &amp; Technologies</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Languages &amp; Runtime</h4>
+        <p>TypeScript, JavaScript, Node.js, NestJS</p>
+      </div>
+      <div class="skill-group">
+        <h4>Automation &amp; Testing</h4>
+        <p>Playwright (E2E, UI, browser, hardware-aware flows), Jest, n8n, Make.com, GitHub Actions</p>
+      </div>
+      <div class="skill-group">
+        <h4>Queue &amp; Messaging</h4>
+        <p>BullMQ, Redis, Google Pub/Sub, CloudEvents, event-driven architecture, idempotent and retry-safe workflows</p>
+      </div>
+      <div class="skill-group">
+        <h4>Cloud &amp; Infrastructure</h4>
+        <p>Google Cloud Functions Gen2, Cloud Run, AWS EC2, Ansible, Terraform, mixed macOS/Linux, SSH provisioning</p>
+      </div>
+      <div class="skill-group">
+        <h4>Comms &amp; Voice Platforms</h4>
+        <p>Twilio, LiveKit, SendGrid, Buildium, multi-channel orchestration (voice/SMS/email)</p>
+      </div>
+      <div class="skill-group">
+        <h4>PMS &amp; Real Estate Tooling</h4>
+        <p>AppFolio, Yardi, Property Meld, Epic PM, Vendoroo, listing scraping, push integrations, schema validation</p>
+      </div>
+      <div class="skill-group">
+        <h4>Identity &amp; API Standards</h4>
+        <p>OAuth 2.0, UMA 2.0, OIDC, SAML, LDAP, FIDO, REST APIs, Postman</p>
+      </div>
+      <div class="skill-group">
+        <h4>Docs &amp; Developer Portals</h4>
+        <p>Confluence, Docusaurus, GitBook, Eleventy, Jekyll, Gatsby, WordPress, Drupal, static site generators</p>
+      </div>
+      <div class="skill-group">
+        <h4>Content &amp; Writing</h4>
+        <p>API docs, developer guides, user manuals, release notes, runbooks, white papers, case studies, UX/SEO writing, training materials</p>
+      </div>
+      <div class="skill-group">
+        <h4>Project &amp; CRM Tools</h4>
+        <p>Jira, Linear, ClickUp, Asana, Notion, Salesforce, HubSpot, Zoho, Airtable, Slack, GitHub, GitLab</p>
+      </div>
+      <div class="skill-group">
+        <h4>Client Success</h4>
+        <p>End-to-end onboarding, SOP-to-workflow translation, escalations, post-launch tuning, support, training, knowledge base design</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section" id="education">
+    <div class="section-label">Education</div>
+    <div class="edu-entry">
+      <span class="edu-degree">BS Mass Communication</span>
+      <span class="edu-school">NUML &nbsp;·&nbsp; Islamabad, Pakistan</span>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    <a href="../">← Back to portfolio</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="mailto:talhafaisalglor@gmail.com">talhafaisalglor@gmail.com</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    Talha Faisal &nbsp;&copy; 2026
+  </p>
+</footer>
+
+</body>
+</html>

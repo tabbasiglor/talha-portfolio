@@ -1,6 +1,6 @@
-# Talha Faisal Portfolio
+# Talha Abbasi Portfolio
 
-React + TypeScript portfolio for Talha Faisal's AI adoption implementation positioning.
+React + TypeScript portfolio for Talha Abbasi's AI adoption implementation positioning.
 
 Live site: https://tabbasiglor.github.io/talha-portfolio
 

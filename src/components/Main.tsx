@@ -15,13 +15,13 @@ function Main() {
 
         <div className="content">
           <div className="social_icons">
-            <a href="mailto:talhafaisalglor@gmail.com" aria-label="Email Talha Faisal">
+            <a href="mailto:tabbasiglor@gmail.com" aria-label="Email Talha Abbasi">
               <MailOutlineIcon />
             </a>
           </div>
 
           <p className="eyebrow">AI Implementation</p>
-          <h1>Talha Faisal</h1>
+          <h1>Talha Abbasi</h1>
           <p className="headline">Most AI pilots don't survive contact with real operations.</p>
 
           <p className="summary-copy">
@@ -80,7 +80,7 @@ function Main() {
           </div>
 
           <div className="mobile_social_icons">
-            <a href="mailto:talhafaisalglor@gmail.com" aria-label="Email Talha Faisal">
+            <a href="mailto:tabbasiglor@gmail.com" aria-label="Email Talha Abbasi">
               <MailOutlineIcon />
             </a>
           </div>

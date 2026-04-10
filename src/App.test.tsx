@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders main portfolio heading", () => {
   render(<App />);
-  const headings = screen.getAllByText(/talha faisal/i);
+  const headings = screen.getAllByText(/Talha Abbasi/i);
   expect(headings.length).toBeGreaterThan(0);
 });
