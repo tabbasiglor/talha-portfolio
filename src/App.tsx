@@ -39,8 +39,8 @@ function App() {
   return (
     <BrowserRouter basename="/talha-portfolio">
       <Routes>
-        <Route path="/" element={<PortfolioApp />} />
-        <Route path="/cv" element={<CVPage />} />
+        <Route path="/" element={<CVPage />} />
+        <Route path="/cv" element={<PortfolioApp />} />
       </Routes>
     </BrowserRouter>
   );
