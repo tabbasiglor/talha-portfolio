@@ -454,32 +454,128 @@
 
 /* ── PRINT ── */
 @media print {
+  @page {
+    size: A4;
+    margin: 1.8cm 1.5cm;
+  }
+
+  html, body {
+    background: #fff !important;
+    color: #0f0a1e !important;
+    font-size: 9.5pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   .cv-page {
-    background: #fff;
-    color: #0f0a1e;
+    background: #fff !important;
+    color: #0f0a1e !important;
+    min-height: unset;
     --line: #ddd;
-    --surface: #f8f5ff;
+    --surface: #f0eaf8;
     --text-primary: #0f0a1e;
     --text-muted: #3d2b5e;
     --text-faint: #6b5a8a;
+    --chip-border: #c4b5fd;
   }
 
-  .cv-nav, .cv-print-btn { display: none; }
-  .cv-page-inner { padding: 1.5cm 1.5cm 2cm; max-width: 100%; }
+  .cv-nav, .cv-print-btn, .cv-footer, .cv-quick-timeline { display: none !important; }
 
+  .cv-page-inner {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  /* Header */
   .cv-header h1 {
-    background: none;
-    -webkit-background-clip: unset;
-    background-clip: unset;
-    color: #0f0a1e;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    color: #2e1065 !important;
+    font-size: 2rem;
   }
 
-  .cv-stat-card, .cv-project-card { background: #f8f5ff; border-color: #ddd; }
-  .exp-entry, .freelance-entry { break-inside: avoid; }
+  .cv-header { border-bottom-color: #ddd; }
+  .cv-header .cv-eyebrow { color: #7c3aed; }
+  .cv-header .cv-tagline { color: #1e0a3c; }
+  .cv-contact-row a, .cv-contact-row span { color: #4c1d95; }
+
+  /* Stats */
+  .cv-stats-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-bottom: 1.5rem;
+  }
+
+  .cv-stat-card {
+    background: #f5f0ff !important;
+    border-color: #ddd !important;
+    padding: 0.6rem 0.8rem;
+
+    .val { color: #2e1065; font-size: 1.2rem; }
+    .lbl { color: #6b5a8a; font-size: 0.7rem; }
+  }
+
+  /* Sections */
+  .cv-section { margin-bottom: 1.4rem; page-break-inside: avoid; }
+  .cv-section-label { color: #7c3aed; margin-bottom: 0.8rem; }
   .cv-section-label::after { background: #ddd; }
-  a { color: inherit; text-decoration: none; }
-  .cv-section-label, .cv-eyebrow { color: #6b21a8; }
-  .exp-role, .freelance-role { color: #7c3aed; }
-  .cv-skill-group h4 { color: #7c3aed; }
-  .cv-quick-timeline { display: none; }
+
+  /* Profile */
+  .cv-profile-text { color: #3d2b5e; font-size: 0.88rem; }
+
+  /* Experience */
+  .exp-entry {
+    margin-bottom: 1.2rem;
+    padding-bottom: 1.2rem;
+    border-bottom-color: #e8ddf8;
+    page-break-inside: avoid;
+  }
+
+  .exp-company { color: #1e0a3c; }
+  .exp-role { color: #7c3aed; }
+  .exp-meta { color: #6b5a8a; }
+  .exp-context { color: #6b5a8a; margin: 0.3rem 0 0.6rem; }
+
+  .exp-points li {
+    color: #3d2b5e;
+    font-size: 0.82rem;
+    &::before { background: #7c3aed; }
+  }
+
+  .point-label { color: #1e0a3c; }
+
+  /* Freelance */
+  .freelance-entry {
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.9rem;
+    border-bottom-color: #e8ddf8;
+    page-break-inside: avoid;
+  }
+
+  .freelance-company { color: #1e0a3c; }
+  .freelance-role { color: #7c3aed; }
+  .freelance-meta { color: #6b5a8a; }
+  .freelance-entry p { color: #3d2b5e; font-size: 0.82rem; }
+
+  /* Projects */
+  .cv-projects-grid { grid-template-columns: repeat(3, 1fr); }
+  .cv-project-card {
+    background: #f5f0ff !important;
+    border-color: #ddd !important;
+    h4 { color: #2e1065; }
+    p { color: #3d2b5e; font-size: 0.8rem; }
+  }
+
+  /* Skills */
+  .cv-skills-grid { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
+  .cv-skill-group {
+    h4 { color: #7c3aed; font-size: 0.72rem; }
+    p { color: #3d2b5e; font-size: 0.78rem; }
+  }
+
+  /* Education */
+  .cv-edu-degree { color: #1e0a3c; }
+  .cv-edu-school { color: #3d2b5e; }
+
+  a { color: inherit !important; text-decoration: none !important; }
 }
