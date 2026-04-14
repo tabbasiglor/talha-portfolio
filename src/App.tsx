@@ -40,7 +40,7 @@ function App() {
     <BrowserRouter basename="/talha-portfolio">
       <Routes>
         <Route path="/" element={<CVPage />} />
-        <Route path="/cv" element={<PortfolioApp />} />
+        <Route path="/agency" element={<PortfolioApp />} />
       </Routes>
     </BrowserRouter>
   );
