@@ -10,6 +10,8 @@ import Footer from "./components/Footer";
 import Capabilities from "./components/Capabilities";
 import FadeIn from "./components/FadeIn";
 import CVPage from "./pages/CVPage";
+import backgroundVideo from "./assets/images/bg-video.mp4";
+import backgroundPoster from "./assets/images/figma-gradient-bg.png";
 import "./index.scss";
 
 function PortfolioApp() {
@@ -21,6 +23,17 @@ function PortfolioApp() {
 
   return (
     <div className={`main-container ${mode === "dark" ? "dark-mode" : "light-mode"}`}>
+      <video
+        className="background-video"
+        autoPlay
+        muted
+        loop
+        playsInline
+        poster={backgroundPoster}
+        aria-hidden="true"
+      >
+        <source src={backgroundVideo} type="video/mp4" />
+      </video>
       <Navigation parentToChild={{ mode }} modeChange={() => {}} />
       <FadeIn transitionDuration={700}>
         <Main />

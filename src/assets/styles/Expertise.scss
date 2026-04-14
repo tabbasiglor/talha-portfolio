@@ -5,7 +5,7 @@
   border-radius: 22px;
   border: 1px solid color-mix(in srgb, var(--line) 88%, transparent);
   background:
-    linear-gradient(140deg, color-mix(in srgb, #8b5cf6 14%, transparent), color-mix(in srgb, #ec4899 9%, transparent)),
+    linear-gradient(140deg, color-mix(in srgb, var(--panel-tint-a) 100%, transparent), color-mix(in srgb, var(--panel-tint-b) 100%, transparent)),
     var(--surface);
   backdrop-filter: blur(12px);
   box-shadow: var(--shadow);
@@ -32,10 +32,10 @@
   transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
 
   svg {
-    color: #ffd4f6;
+    color: #eaf5fc;
     padding: 0.42rem;
     border-radius: 12px;
-    background: linear-gradient(145deg, rgba(236, 72, 153, 0.32), rgba(139, 92, 246, 0.26));
+    background: linear-gradient(145deg, rgba(24, 95, 165, 0.32), rgba(15, 110, 86, 0.26));
   }
 
   h3 {
@@ -51,8 +51,8 @@
 
 .skills-grid .method-card:hover {
   transform: translateY(-3px);
-  border-color: color-mix(in srgb, #f9a8d4 56%, transparent);
-  box-shadow: 0 16px 30px rgba(118, 24, 80, 0.28);
+  border-color: color-mix(in srgb, var(--action) 56%, transparent);
+  box-shadow: 0 16px 30px rgba(10, 53, 91, 0.28);
 }
 
 @media (max-width: 860px) {

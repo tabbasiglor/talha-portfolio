@@ -13,7 +13,7 @@
   border-radius: 24px;
   box-shadow: var(--shadow);
   background:
-    linear-gradient(145deg, color-mix(in srgb, #8b5cf6 20%, transparent), color-mix(in srgb, #db2777 12%, transparent)),
+    linear-gradient(145deg, color-mix(in srgb, var(--panel-tint-a) 100%, transparent), color-mix(in srgb, var(--panel-tint-b) 100%, transparent)),
     var(--surface);
   backdrop-filter: blur(16px);
   position: relative;
@@ -39,8 +39,7 @@
   right: -180px;
   bottom: -220px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(244, 114, 182, 0.24), rgba(124, 58, 237, 0) 64%);
-  pointer-events: none;
+  background: radial-gradient(circle, var(--panel-glow), rgba(24, 95, 165, 0) 64%);
 }
 
 .about-section .image-wrapper {
@@ -58,8 +57,8 @@
   font-size: 1.8rem;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(140deg, #ec4899, #8b5cf6 56%, #c084fc);
-  box-shadow: 0 14px 30px rgba(219, 39, 119, 0.34);
+  background: linear-gradient(140deg, var(--accent), var(--accent-2) 56%, var(--action));
+  box-shadow: 0 14px 30px rgba(12, 68, 124, 0.34);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -96,7 +95,7 @@
 .about-section .content .eyebrow {
   margin: 1rem 0 0;
   color: #f9a8d4;
-  font-size: 0.78rem;
+  color: var(--eyebrow);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   font-weight: 700;
@@ -107,7 +106,7 @@
   font-size: clamp(2.15rem, 6vw, 3.9rem);
   line-height: 1;
   margin: 0.4rem 0 0;
-  background: linear-gradient(90deg, #fbcfe8, #c4b5fd 52%, #f9a8d4);
+  background: linear-gradient(90deg, var(--heading-start), var(--heading-mid) 52%, var(--heading-end));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
