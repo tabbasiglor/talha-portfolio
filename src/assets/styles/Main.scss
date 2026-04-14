@@ -115,7 +115,7 @@
 .about-section .content .headline {
   margin-top: 0.76rem;
   font-size: clamp(1.05rem, 2.5vw, 1.5rem);
-  color: #f2e8ff;
+  color: var(--text-primary);
 }
 
 .about-section .content .summary-copy {
@@ -153,9 +153,9 @@
 }
 
 .cta-primary {
-  background: linear-gradient(125deg, #ec4899, #8b5cf6);
+  background: linear-gradient(125deg, var(--accent), var(--accent-2));
   color: #fff;
-  box-shadow: 0 9px 24px rgba(219, 39, 119, 0.34);
+  box-shadow: 0 9px 24px rgba(12, 68, 124, 0.34);
 }
 
 .cta-secondary {
@@ -179,9 +179,9 @@
   display: inline-flex;
   gap: 0.35rem;
   align-items: center;
-  color: #feeafd;
-  background: color-mix(in srgb, #ec4899 20%, transparent);
-  border: 1px solid color-mix(in srgb, #f9a8d4 38%, transparent);
+  color: var(--pill-text);
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
 }
 
 .risk-strip svg {
@@ -208,7 +208,7 @@
   font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
   font-size: 1.48rem;
   font-weight: 700;
-  color: #fdf3ff;
+  color: var(--text-primary);
 }
 
 .hero-stats .label {

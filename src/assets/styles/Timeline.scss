@@ -6,7 +6,7 @@
   border-radius: 22px;
   border: 1px solid color-mix(in srgb, var(--line) 88%, transparent);
   background:
-    linear-gradient(150deg, color-mix(in srgb, #db2777 10%, transparent), color-mix(in srgb, #8b5cf6 12%, transparent)),
+    linear-gradient(150deg, color-mix(in srgb, var(--panel-tint-a) 100%, transparent), color-mix(in srgb, var(--panel-tint-b) 100%, transparent)),
     var(--surface);
   box-shadow: var(--shadow);
   backdrop-filter: blur(12px);
@@ -24,7 +24,7 @@
 }
 
 .vertical-timeline::before {
-  background: color-mix(in srgb, #f9a8d4 42%, transparent);
+  background: color-mix(in srgb, var(--line) 85%, transparent);
 }
 
 .vertical-timeline-element-content {
@@ -35,7 +35,7 @@
 }
 
 .vertical-timeline-element-content:hover {
-  border-color: color-mix(in srgb, #f9a8d4 62%, transparent) !important;
+  border-color: color-mix(in srgb, var(--action) 62%, transparent) !important;
 }
 
 .vertical-timeline-element p,
@@ -56,7 +56,7 @@
 
 .vertical-timeline-element-icon {
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--line) 78%, transparent),
-    inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 0 0 0 rgba(236, 72, 153, 0.42) !important;
+    inset 0 1px 0 rgba(255, 255, 255, 0.28), 0 0 0 0 rgba(24, 95, 165, 0.42) !important;
 }
 
 .svg-inline--fa {
