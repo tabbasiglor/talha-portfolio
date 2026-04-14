@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 import Capabilities from "./components/Capabilities";
 import FadeIn from "./components/FadeIn";
 import CVPage from "./pages/CVPage";
-import backgroundVideo from "./assets/images/bg-video.mp4";
+const backgroundVideo = "https://media.githubusercontent.com/media/tabbasiglor/talha-portfolio/main/src/assets/images/bg-video.mp4";
 import backgroundPoster from "./assets/images/figma-gradient-bg.png";
 import "./index.scss";
 
