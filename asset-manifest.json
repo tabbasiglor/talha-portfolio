@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/talha-portfolio/static/css/main.329a48a7.css",
-    "main.js": "/talha-portfolio/static/js/main.6ad74687.js",
+    "main.css": "/talha-portfolio/static/css/main.60d2b03b.css",
+    "main.js": "/talha-portfolio/static/js/main.942cfdb0.js",
     "static/js/453.d454450d.chunk.js": "/talha-portfolio/static/js/453.d454450d.chunk.js",
     "static/media/bg-video.mp4": "/talha-portfolio/static/media/bg-video.e119c56da0e4dc5fbda0.mp4",
     "index.html": "/talha-portfolio/index.html",
-    "main.329a48a7.css.map": "/talha-portfolio/static/css/main.329a48a7.css.map",
-    "main.6ad74687.js.map": "/talha-portfolio/static/js/main.6ad74687.js.map",
+    "main.60d2b03b.css.map": "/talha-portfolio/static/css/main.60d2b03b.css.map",
+    "main.942cfdb0.js.map": "/talha-portfolio/static/js/main.942cfdb0.js.map",
     "453.d454450d.chunk.js.map": "/talha-portfolio/static/js/453.d454450d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.329a48a7.css",
-    "static/js/main.6ad74687.js"
+    "static/css/main.60d2b03b.css",
+    "static/js/main.942cfdb0.js"
   ]
 }
