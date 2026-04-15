@@ -10,7 +10,6 @@ import Footer from "./components/Footer";
 import Capabilities from "./components/Capabilities";
 import FadeIn from "./components/FadeIn";
 import CVPage from "./pages/CVPage";
-import backgroundPoster from "./assets/images/figma-gradient-bg.png";
 import "./index.scss";
 
 const backgroundVideo = "https://media.githubusercontent.com/media/tabbasiglor/talha-portfolio/main/src/assets/images/bg-video.mp4";
@@ -30,8 +29,7 @@ function PortfolioApp() {
         muted
         loop
         playsInline
-        poster={backgroundPoster}
-        aria-hidden="true"
+aria-hidden="true"
       >
         <source src={backgroundVideo} type="video/mp4" />
       </video>
