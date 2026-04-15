@@ -38,7 +38,7 @@ const timelineItems = [
     points: "Built across the full MindGym stack: the signal processing pipeline that ran live biosensor sessions, the Playwright test suite validating BLE hardware communication, the Ansible fleet across 38 hosts, and the launch automation for a physical immersive product used by the US Air Force and US Navy. This is where documentation turned into systems.",
   },
   {
-    date: "2025 - Present",
+    date: "2025 - 2026",
     title: "Super",
     subtitle: "AI Implementation at Scale",
     points: "Owned AI implementation for 40+ property management organizations end to end: integration build against AppFolio, Yardi, Property Meld, and Epic PM; BullMQ queue workers with retry logic and idempotency controls; LLM-assisted extraction pipelines; onboarding, go-live, post-launch tuning, and escalation as a single continuous responsibility.",

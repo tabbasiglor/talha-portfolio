@@ -14,7 +14,7 @@ const quickItems = [
   { date: "2022 - 2023", title: "IDENTOS", role: "Technical Writer" },
   { date: "2023 - 2024", title: "apexanalytix", role: "Technical Writer" },
   { date: "2023 - 2025", title: "Lumena Labs", role: "QA Lead & Technical Writer" },
-  { date: "2025 - Present", title: "Super", role: "Automation & AI Implementation Specialist" },
+  { date: "2025 - 2026", title: "Super", role: "Automation & AI Implementation Specialist" },
 ];
 
 function CVQuickTimeline() {
@@ -46,14 +46,14 @@ function CVQuickTimeline() {
           <VerticalTimelineElement
             key={item.title}
             className="vertical-timeline-element--work"
-            contentStyle={{ background: "rgba(78,28,124,0.34)", color: "#f8f5ff", padding: "0.6rem 1rem", boxShadow: "none", border: "1px solid rgba(236,72,153,0.28)" }}
-            contentArrowStyle={{ borderRight: "7px solid rgba(78,28,124,0.34)" }}
+            contentStyle={{ background: "rgba(12,28,43,0.48)", color: "#f4f8fb", padding: "0.6rem 1rem", boxShadow: "none", border: "1px solid rgba(29,158,117,0.28)" }}
+            contentArrowStyle={{ borderRight: "7px solid rgba(12,28,43,0.48)" }}
             date={item.date}
-            iconStyle={{ background: "#ec4899", color: "#fff", width: "30px", height: "30px", marginLeft: "-15px" }}
+            iconStyle={{ background: "#1d9e75", color: "#fff", width: "30px", height: "30px", marginLeft: "-15px" }}
             icon={<FontAwesomeIcon icon={faBriefcase as any} style={{ fontSize: "0.7rem" }} />}
           >
             <h3 style={{ margin: 0, fontSize: "0.95rem", fontFamily: "'Space Grotesk', sans-serif" }}>{item.title}</h3>
-            <h4 style={{ margin: "0.2rem 0 0", fontSize: "0.8rem", fontWeight: 500, color: "#f9a8d4" }}>{item.role}</h4>
+            <h4 style={{ margin: "0.2rem 0 0", fontSize: "0.8rem", fontWeight: 500, color: "#9ad9c7" }}>{item.role}</h4>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
@@ -142,7 +142,7 @@ function CVPage() {
             <div className="exp-top">
               <div className="exp-company">Super</div>
               <div className="exp-role">Automation &amp; AI Implementation Specialist</div>
-              <div className="exp-meta">Sep 2025 – Present &nbsp;·&nbsp; Remote</div>
+              <div className="exp-meta">Sep 2025 – 2026 &nbsp;·&nbsp; Remote</div>
             </div>
             <p className="exp-context">AI communication and workflow automation platform for residential property management. Handles inbound and outbound voice, SMS, and email agents synced with AppFolio, Yardi, and other property management software.</p>
             <ul className="exp-points">
