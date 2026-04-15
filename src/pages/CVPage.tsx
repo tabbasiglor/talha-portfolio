@@ -67,11 +67,19 @@ function CVPage() {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     document.title = "Talha Abbasi | CV";
-    document.body.style.background = "linear-gradient(160deg, #1a0a2e, #2d114d)";
-    document.documentElement.style.background = "linear-gradient(160deg, #1a0a2e, #2d114d)";
+    document.body.style.background = "linear-gradient(160deg, #0d2337, #163a58)";
+    document.documentElement.style.background = "linear-gradient(160deg, #0d2337, #163a58)";
+
+    const handleBeforePrint = () => { document.title = ""; };
+    const handleAfterPrint  = () => { document.title = "Talha Abbasi | CV"; };
+    window.addEventListener("beforeprint", handleBeforePrint);
+    window.addEventListener("afterprint",  handleAfterPrint);
+
     return () => {
       document.body.style.background = "";
       document.documentElement.style.background = "";
+      window.removeEventListener("beforeprint", handleBeforePrint);
+      window.removeEventListener("afterprint",  handleAfterPrint);
     };
   }, []);
 
