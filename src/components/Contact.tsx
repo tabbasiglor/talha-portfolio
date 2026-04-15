@@ -26,7 +26,7 @@ function Contact() {
 
           <div
             className="calendly-inline-widget"
-            data-url="https://calendly.com/tabbasiglor/30min?background_color=2d114d&text_color=f8f5ff&primary_color=ec4899"
+            data-url="https://calendly.com/tabbasiglor/30min?background_color=0d2337&text_color=f4f8fb&primary_color=1d9e75"
             style={{ width: "100%", minWidth: "320px", height: "750px" }}
           />
         </div>
