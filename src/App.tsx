@@ -10,9 +10,8 @@ import Footer from "./components/Footer";
 import Capabilities from "./components/Capabilities";
 import FadeIn from "./components/FadeIn";
 import CVPage from "./pages/CVPage";
+import backgroundVideo from "./assets/images/bg-video.mp4";
 import "./index.scss";
-
-const backgroundVideo = "https://media.githubusercontent.com/media/tabbasiglor/talha-portfolio/main/src/assets/images/bg-video.mp4";
 
 function PortfolioApp() {
   const [mode] = useState<"dark">("dark");
@@ -29,7 +28,8 @@ function PortfolioApp() {
         muted
         loop
         playsInline
-aria-hidden="true"
+        preload="auto"
+        aria-hidden="true"
       >
         <source src={backgroundVideo} type="video/mp4" />
       </video>
