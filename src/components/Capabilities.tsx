@@ -118,7 +118,6 @@ function Capabilities() {
                     <h3 className="skill-title">{item.name}</h3>
                     <p className="skill-category">{formatCategoryName(item.category)}</p>
                   </div>
-                  <span className="impact">impact {item.impact}/5</span>
                 </div>
 
                 <p className="skill-desc">{item.description}</p>
@@ -145,7 +144,7 @@ function Capabilities() {
               <div>
                 <h3 className="detail-title">{selected.name}</h3>
                 <p className="detail-meta">
-                  {formatCategoryName(selected.category)} • impact {selected.impact}/5
+                  {formatCategoryName(selected.category)}
                 </p>
                 <p className="detail-body">{selected.description}</p>
 
