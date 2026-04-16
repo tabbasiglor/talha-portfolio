@@ -19,9 +19,10 @@ function Contact() {
           <p className="section-kicker">Contact</p>
           <h1>Start with a 30-minute audit call.</h1>
           <p>
-            Walk through your current AI initiative. What exists, what is stalling, what has already
-            broken. The call produces an honest read on where things are and what it realistically
-            takes to get to production. No pitch. Most clients who move forward do so within a week.
+            Walk through where your operation is running on manual work it should not be. If there
+            is already an AI initiative stalling or broken, we cover that too. The call produces an
+            honest read on what is actually possible and what it realistically takes to get there.
+            No pitch. Most clients who move forward do so within a week.
           </p>
 
           <div

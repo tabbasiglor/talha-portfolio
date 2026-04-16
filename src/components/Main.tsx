@@ -20,18 +20,19 @@ function Main() {
             </a>
           </div>
 
-          <p className="eyebrow">AI Implementation</p>
+          <p className="eyebrow">AI Adoption</p>
           <h1>Talha Abbasi</h1>
           <p className="headline">Most AI pilots don't survive contact with real operations.</p>
 
           <p className="summary-copy">
-            Owned AI implementation end to end across 40+ organizations: workflow diagnosis,
+            Owned AI adoption end to end across 40+ organizations: workflow diagnosis,
             integration build, QA, rollout, and post-launch support. Not advisory. Not a handoff.
+            The work covers enterprise platforms, SaaS products, and small business operations.
             The systems built here are still running.
           </p>
 
           <ul className="hero-points">
-            <li>40+ organizations moved from AI pilot to production with direct technical ownership at every stage.</li>
+            <li>40+ organizations moved from manual workflows to production AI with direct technical ownership at every stage.</li>
             <li>8 case studies across property management AI, biosensor hardware, and infrastructure automation.</li>
             <li>Post-launch support stays active until the team can run the system without outside help.</li>
           </ul>

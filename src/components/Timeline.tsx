@@ -28,8 +28,8 @@ const timelineItems = [
   {
     date: "2023 - 2024",
     title: "apexanalytix",
-    subtitle: "QA and Automation Workflows",
-    points: "Built testing and automation workflows for supplier risk and finance operations software. First sustained focus on making release processes repeatable rather than heroic.",
+    subtitle: "Internal Operations Documentation",
+    points: "Wrote and maintained the knowledge base for the world's largest supplier risk platform. $9 trillion in spend, 300+ Fortune 500 clients. Documentation audience: procurement professionals at IBM, Microsoft, P&G, and GE. A documentation gap at this scale does not produce one confused user. It produces support demand across hundreds of enterprise accounts at once.",
   },
   {
     date: "2023 - 2025",
