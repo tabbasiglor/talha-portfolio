@@ -1,4 +1,4 @@
-footer {
+.agency-page footer {
   width: min(1180px, 92vw);
   margin: 1.8rem auto 2.6rem;
   border: 1px solid color-mix(in srgb, var(--line) 90%, transparent);
@@ -19,13 +19,13 @@ footer {
   }
 }
 
-.footer-icons {
+.agency-page .footer-icons {
   display: flex;
   align-items: center;
   gap: 0.6rem;
 }
 
-.footer-icons a {
+.agency-page .footer-icons a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +36,7 @@ footer {
   background: linear-gradient(130deg, rgba(24, 95, 165, 0.24), rgba(15, 110, 86, 0.24));
 }
 
-.footer-icons svg {
+.agency-page .footer-icons svg {
   width: 1.1em !important;
   height: 1.1em !important;
 }
