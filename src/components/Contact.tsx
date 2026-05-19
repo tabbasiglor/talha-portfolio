@@ -17,17 +17,17 @@ function Contact() {
       <div className="items-container">
         <div className="contact_wrapper">
           <p className="section-kicker">Contact</p>
-          <h1>Start with a 30-minute audit call.</h1>
+          <h1>Start with the workflow that is wasting the most time.</h1>
           <p>
-            Walk through where your operation is running on manual work it should not be. If there
-            is already an AI initiative stalling or broken, we cover that too. The call produces an
-            honest read on what is actually possible and what it realistically takes to get there.
-            No pitch. Most clients who move forward do so within a week.
+            Bring the call flow, follow-up process, reporting task, CRM problem, or day-to-day
+            admin workflow you want to fix. We map what should stay human, what can be automated,
+            and what the safest first implementation looks like. If there is already an AI system
+            stalling or broken, we can work through that too.
           </p>
 
           <div
             className="calendly-inline-widget"
-            data-url="https://calendly.com/tabbasiglor/30min?background_color=0d2337&text_color=f4f8fb&primary_color=1d9e75"
+            data-url="https://calendly.com/tabbasiglor/30min?background_color=0a1017&text_color=f7f8fb&primary_color=dce3eb"
             style={{ width: "100%", minWidth: "320px", height: "750px" }}
           />
         </div>

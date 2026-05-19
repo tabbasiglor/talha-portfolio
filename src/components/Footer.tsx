@@ -10,7 +10,7 @@ function Footer() {
           <MailOutlineIcon />
         </a>
       </div>
-      <p>Talha Abbasi • AI Adoption Implementation Systems</p>
+      <p>Talha Abbasi • Custom AI implementation, voice agents, and workflow systems</p>
     </footer>
   );
 }
